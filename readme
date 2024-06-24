@@ -6,4 +6,20 @@ to run => npm start
 to create a component => ng generate component -commponent--name
 
 
+data interpolation => {{...}}
+------------------
+
+attribute binding/interpolation => [--attribute-name]='-value'
+------------------------------
+
+binding using function => "--function_name(parameter)"
+----------------------
+
+directives: ngClass, *ngIf, *ngFor
+-----------
+
+        structural(*):
+        ------------   directives that change the structure of html document through add/remove of html elements   
+
+        
 jm cooper git hub => https://github.com/jmcooper/joes-robot-shop

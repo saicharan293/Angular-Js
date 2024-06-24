@@ -9,8 +9,8 @@
     </div>
   
     <ul class="products">
-      <li class="product-item">
-        <div class="product">
+      <li class="product-item" *ngFor="let product of products">
+        <div class="product" >
           <div class="product-details">
             <img [src]="getImageUrl(product)" [alt]="getImageName(product)" />
             <div class="product-info">
