@@ -10,6 +10,7 @@
 }
 
 .filters button {
+  cursor: pointer;
   width: 100px;
 }
 

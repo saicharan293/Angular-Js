@@ -9,7 +9,7 @@ to create a component => ng generate component -commponent--name
 data interpolation => {{...}}
 ------------------
 
-attribute binding/interpolation => [--attribute-name]='-value'
+attribute binding/interpolation => [--attribute-name]='-value' , evaluation of expressions
 ------------------------------
 
 binding using function => "--function_name(parameter)"
