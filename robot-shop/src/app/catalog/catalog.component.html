@@ -20,7 +20,7 @@
             </div>
           </div>
           <div class="price">
-            <div [class.strikethrough]="product.discount>0">{{product.price | currency}}</div>
+            <div [style.color]="product.discount>0?'red':''" [ngClass]="getDiscountedClass(product)">{{product.price | currency}}</div>
             <div class="discount" *ngIf="product.discount>0">
               {{(product.price*(1-product.discount)) | currency}}
             </div>
