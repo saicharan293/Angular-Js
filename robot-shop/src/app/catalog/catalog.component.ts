@@ -7,7 +7,7 @@ import { IProduct } from './product.model';
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent {
-  products: any;
+  products: IProduct[];
   filter:string='';
 
   constructor(){
@@ -21,7 +21,6 @@ export class CatalogComponent {
       price: 1220.5,
       discount: 0.2,
     },
-    null,
     {
       id: 17,
       description: "A spring base - great for reaching high places.",
@@ -187,16 +186,14 @@ export class CatalogComponent {
     },];
   }
   getImageUrl(product:IProduct){
-    if(!product) return '';
     return '/assets/images/robot-parts/'+product.imageName;
   }
   getImageName(product:IProduct){
-    if(!product) return '';
     return product.name;
   }
   getFilteredComponents(){
     return this.filter===''
       ?this.products
-      :this.products.filter((product:any)=>product.category===this.filter);
+      :this.products.filter((product)=>product.category===this.filter);
   }
 }
