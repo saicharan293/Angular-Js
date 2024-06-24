@@ -7,8 +7,10 @@ import { IProduct } from './product.model';
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent {
-  products: IProduct[];
+  // products: IProduct[];
+  products:any;
   filter:string='';
+  cart:IProduct[]=[];
 
   constructor(){
     this.products=[{
@@ -185,20 +187,16 @@ export class CatalogComponent {
       discount: 0,
     },];
   }
-  getImageUrl(product:IProduct){
-    return '/assets/images/robot-parts/'+product.imageName;
+
+  addToCart(product:IProduct){
+    this.cart.push(product);
+    console.log(`product ${product.name} added to the cart`)
   }
-  getImageName(product:IProduct){
-    return product.name;
-  }
+  
   getFilteredComponents(){
     return this.filter===''
       ?this.products
-      :this.products.filter((product)=>product.category===this.filter);
+      :this.products.filter((product:any)=>product.category===this.filter);
   }
-  getDiscountedClass(product:IProduct){
-    // if (product.discount>0) return 'strikethrough';
-    // else return '';
-    return (product.discount>0)?['strikethrough']:[];
-  }
+  
 }
