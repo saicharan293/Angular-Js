@@ -12,7 +12,7 @@ export class ProductDetailsComponent {
   @Output() buy=new EventEmitter;
 
   getImageUrl(product:IProduct){
-    return '/assets/images/robot-parts/'+product.imageName;
+    return '/assets/images/'+product.imageName;
   }
   getImageName(product:IProduct){
     return product.name;
