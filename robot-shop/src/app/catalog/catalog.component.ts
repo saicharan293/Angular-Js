@@ -1,8 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { IProduct } from './product.model';
-import { CartService } from '../cart.service';
+// import { CartService } from '../cart.service';
 import { ProductService } from './product.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartService } from '../cart/cart.service';
 
 @Component({
   selector: 'app-catalog',
@@ -25,7 +26,8 @@ export class CatalogComponent {
       this.products = products;
     });
     // this.filter=this.route.snapshot.params['filter']
-    this.route.params.subscribe((params)=>{
+    //this is the main area that queryparams work as per user requirement => for routing on click on each part in catalog
+    this.route.queryParams.subscribe((params)=>{
       this.filter=params['filter']??'';
     })
   }

@@ -32,8 +32,9 @@ export class CartComponent implements OnInit {
     this.cartService.remove(product);
   }
 
+  //removed 'robot parts' in the return type
   getImageUrl(product: IProduct) {
     if (!product) return '';
-    return '/assets/images/robot-parts/' + product.imageName;
+    return '/assets/images/' + product.imageName;
   }
 }
