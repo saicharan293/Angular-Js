@@ -12,10 +12,13 @@ export class SignInComponent {
 
   credentials: IUserCredentials={email:'',password:''};
 
+
   constructor(private userService:UserService,private router:Router) { }
   signIn(){
+    debugger;
     this.userService.signIn(this.credentials).subscribe({
-      next:()=> this.router.navigate(['/catalog'])
+      next:()=> this.router.navigate(['/catalog']),
+      // error:()=> (this.signInError=true)
     });
   }
 
