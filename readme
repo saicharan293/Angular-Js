@@ -22,4 +22,14 @@ directives: ngClass, *ngIf, *ngFor
         ------------   directives that change the structure of html document through add/remove of html elements   
 
         
+
+
+Angular Forms:
+--------------
+
+-> Template driven forms => HTML templates, simple
+
+-> Reactive forms => Javascript/Typescript, complex
+
+
 jm cooper git hub => https://github.com/jmcooper/joes-robot-shop
