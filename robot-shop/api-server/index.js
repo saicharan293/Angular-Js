@@ -4,14 +4,24 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.json());
 
+const users={
+  'sai@robot.com':{
+    firstName:'Jim',
+    lastName:'Cooper',
+    email:'sai@robot.com',
+    password:'mypass'
+  }
+}
+
+
 app.get("/api/products", (req, res) => {
   let productsArray = fetchProductsFromDatabase();
   res.send(productsArray);
 });
-// app.get('/api/cart',(req,res)=>{
-//   let cart[]:any;
-//   res.send(cart);
-// })
+app.get('/api/cart',(req,res)=>{
+  let cart=[];
+  res.send(cart);
+})
 
 function fetchProductsFromDatabase() {
   return [
