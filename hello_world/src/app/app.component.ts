@@ -25,6 +25,13 @@ export class AppComponent {
   //style binding
   cvar:string='green'
 
+  //style binding using object
+  mystyle:object={
+    color:'green',
+    background:'yellow',
+    border:'5px dashed red'
+  }
+
   //class binding
   isactive:boolean=true;
   
