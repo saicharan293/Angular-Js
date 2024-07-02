@@ -16,6 +16,8 @@ export class AppComponent {
   date:string=new Date().toLocaleTimeString();
   a=1;
   city:string='hyderabad';
+
+  isdisabled:boolean=true;
   test(){
     return this.a;
   }
