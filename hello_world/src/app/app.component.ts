@@ -21,6 +21,13 @@ export class AppComponent {
   //property binding
   isdisabled:boolean=true;
   ishidden:boolean=false;
+  
+  //style binding
+  cvar:string='green'
+
+  //class binding
+  isactive:boolean=true;
+  
   test(){
     return this.a;
   }

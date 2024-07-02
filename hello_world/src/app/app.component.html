@@ -7,14 +7,9 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <h2>Angular js</h2>
-  <h3 class={{new_class}}>Program: {{title}}</h3>
-  <!-- <h6>a value is: {{test()}}</h6> -->
-  <h2>My city: {{city}}</h2>
-
-  Name: <input type="text">
-  number: <input type="number" name="number" id="" [hidden]="ishidden">
-  <button [disabled]=isdisabled>submit</button>
+  <!-- style using string interpolation -->
+  <h2 style="color: {{cvar}};">Angular js</h2>
+  
   <app-header></app-header>
 </body>
 </html>
