@@ -19,5 +19,7 @@ export class AppComponent {
   decrement(){
     this.counter-=1;
   }
- 
+  changeName(e:any){
+    this.name=e.target.value;
+  }
 }
