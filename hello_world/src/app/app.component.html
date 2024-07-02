@@ -7,14 +7,10 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <!-- style using string interpolation -->
-  <!-- <h2 style="color: {{cvar}}">Angular js</h2> -->
+  <button (click)="increment()">increment</button>
+  <h2>counter: {{counter}}</h2>
+  <button (click)="decrement()">decrement</button>
 
-  <!-- style using attribute binding -->
-  <h2 [style]="{color: cvar}">Angular js</h2>
-
-  <!-- style using object  -->
-  <h4 [style]="mystyle">start with js</h4>
   
   <app-header></app-header>
 </body>

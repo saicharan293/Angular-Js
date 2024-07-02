@@ -11,34 +11,13 @@ import { HeaderComponent } from "./header/header.component";
 })
 export class AppComponent {
   title = 'hello_world';
-  new_class:string='high';
-  // date:string=new Date().toLocaleDateString();
-  date:string=new Date().toLocaleTimeString();
-  a=1;
-  city:string='hyderabad';
-
-
-  //property binding
-  isdisabled:boolean=true;
-  ishidden:boolean=false;
-  
-  //style binding
-  cvar:string='green'
-
-  //style binding using object
-  mystyle:object={
-    color:'green',
-    background:'yellow',
-    border:'5px dashed red'
+  counter:number=0;
+  name:string='sai';
+  increment(){
+    this.counter+=1;
   }
-
-  //class binding
-  isactive:boolean=true;
-  
-  test(){
-    return this.a;
+  decrement(){
+    this.counter-=1;
   }
-  timeid=setInterval(()=>{
-    this.date=new Date().toLocaleTimeString();
-  },1000);
+ 
 }
