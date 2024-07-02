@@ -22,4 +22,5 @@ export class AppComponent {
   changeName(e:any){
     this.name=e.target.value;
   }
+  city:string='Hyderabad';
 }
