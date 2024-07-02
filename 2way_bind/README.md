@@ -29,8 +29,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # Directives
 ## Structural directives:
     DOM manipulation
+
         ngIf
+                ngIf,else
+                ngIf,then,else
         ngFor
         ngSwitch
-## Attribute directives
+
+## Attribute directives:
+    Manipulate appearance or behavior of element, component
+
+        ngClass
+        ngStyle
+        ngModel
+
 ## Component directives

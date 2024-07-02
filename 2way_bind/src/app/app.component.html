@@ -1,15 +1,20 @@
 <h2>Angular js</h2>
 
 <hr>
-<h5>This is row wise setup</h5>
+<!-- <h5>This is row wise setup</h5>
 <table border="1">
   <tr  *ngFor="let m of movies">
     <td>{{m}}</td>
   </tr>
-</table>
+</table> -->
 <h5>This is column wise setup</h5>
 <table border="1">
-  <tr >
+  <tr *ngIf="movies else no_movies">
     <td *ngFor="let m of movies">{{m}}</td>
+  </tr>
+  <tr>
+  <ng-template #no_movies>
+      <td>loading............</td>
+    </ng-template>
   </tr>
 </table>
