@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = '2way_bind';
   city:string='kurnool';
+
+  updateCity(){
+    this.city=='kurnool'?(this.city='guntakal'):(this.city='kurnool');
+  }
 }
