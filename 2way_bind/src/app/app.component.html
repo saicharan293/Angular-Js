@@ -1,9 +1,8 @@
 <h2>Angular js</h2>
 
 <hr>
-city: <input type="text"[(ngModel)]='city'>
-<p *ngIf="show_city">your city is : {{city}}</p>
-<hr>
-<button (click)="displayCity()">{{buttonText}}</button>
-<button (click)="updateCity()">update</button>
-<app-header></app-header>
+<table>
+  <tr *ngFor="let m of movies">
+    <td>{{m}}</td>
+  </tr>
+</table>
