@@ -2,7 +2,8 @@
 
 <hr>
 city: <input type="text"[(ngModel)]='city'>
-<p>your city is : {{city}}</p>
+<p *ngIf="show_city">your city is : {{city}}</p>
 <hr>
+<button (click)="displayCity()">{{buttonText}}</button>
 <button (click)="updateCity()">update</button>
 <app-header></app-header>
