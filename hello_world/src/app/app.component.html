@@ -8,7 +8,10 @@
 </head>
 <body>
   <!-- style using string interpolation -->
-  <h2 style="color: {{cvar}};">Angular js</h2>
+  <!-- <h2 style="color: {{cvar}}">Angular js</h2> -->
+
+  <!-- style using attribute binding -->
+  <h2 [style]="{color: cvar}">Angular js</h2>
   
   <app-header></app-header>
 </body>

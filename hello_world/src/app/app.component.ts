@@ -23,7 +23,7 @@ export class AppComponent {
   ishidden:boolean=false;
   
   //style binding
-  cvar:string='green'
+  cvar:string='yellow'
 
   //class binding
   isactive:boolean=true;
