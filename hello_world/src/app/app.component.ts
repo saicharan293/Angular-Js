@@ -11,4 +11,10 @@ import { HeaderComponent } from "./header/header.component";
 })
 export class AppComponent {
   title = 'hello_world';
+  new_class:string='high';
+  a=1;
+  city:string='hyderabad';
+  test(){
+    return this.a;
+  }
 }
