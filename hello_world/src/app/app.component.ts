@@ -12,7 +12,8 @@ import { HeaderComponent } from "./header/header.component";
 export class AppComponent {
   title = 'hello_world';
   new_class:string='high';
-  date:string=new Date().toLocaleDateString();
+  // date:string=new Date().toLocaleDateString();
+  date:string=new Date().toLocaleTimeString();
   a=1;
   city:string='hyderabad';
   test(){
