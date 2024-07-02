@@ -17,7 +17,10 @@ export class AppComponent {
   a=1;
   city:string='hyderabad';
 
+
+  //property binding
   isdisabled:boolean=true;
+  ishidden:boolean=false;
   test(){
     return this.a;
   }
