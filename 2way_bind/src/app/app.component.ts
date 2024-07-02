@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '2way_bind';
-  // movies=['Rathnam','Naruto','The Boys']
-  movies='';
+  movies=['Rathnam','Naruto','The Boys']
+  // movies='';
 }

@@ -8,9 +8,13 @@
   </tr>
 </table> -->
 <h5>This is column wise setup</h5>
+
 <table border="1">
-  <tr *ngIf="movies else no_movies">
-    <td *ngFor="let m of movies">{{m}}</td>
+  <th *ngIf="movies; then add_movies; else no_movies"></th>
+  <tr >
+    <ng-template #add_movies>
+      <td *ngFor="let m of movies">{{m}}</td>
+    </ng-template>
   </tr>
   <tr>
   <ng-template #no_movies>
