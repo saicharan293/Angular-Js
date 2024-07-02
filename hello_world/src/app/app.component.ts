@@ -19,4 +19,7 @@ export class AppComponent {
   test(){
     return this.a;
   }
+  timeid=setInterval(()=>{
+    this.date=new Date().toLocaleTimeString();
+  },1000);
 }
