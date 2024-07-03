@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '2way_bind';
-  dob:Date=new Date();
+  num:number=0.98;
 }
