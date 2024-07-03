@@ -44,7 +44,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     Manipulate appearance or behavior of element, component
 
         ngClass
-        ngStyle
-        ngModel
+        ngStyle => styling directive
+        ngModel => two way binding directive
 
 ## Component directives
+
+# Pipes
+        to transform data before displaying it
+                    (pipe)
+        i/p data -----------> o/p form
+
+        =>expression|pipe-name[:parameters]
+
+        pipes
+        -----
+        uppercase => total capital letters
+        titlecase => Camel case letters
+        lowercase
+        currency => default: dollars
+        currency:'INR' => Indian rupees
+

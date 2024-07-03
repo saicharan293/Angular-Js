@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '2way_bind';
-  // mobiles:string[]=['redmi','realmi','samsung','oppo','vivo'];
-  num1:number=4;
-  num2:number=2;
-  operator:string='';
+  name:string='sai charan';
+  uname:string='SAI CHARAN';
+  salary:number=67000;
 }
