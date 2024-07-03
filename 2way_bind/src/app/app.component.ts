@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '2way_bind';
-  name:string='sai charan';
-  uname:string='SAI CHARAN';
-  salary:number=67000;
+  person={
+    'name':'sai charan',
+    'age':24,
+    'salary':20000
+  }
 }
