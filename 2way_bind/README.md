@@ -67,5 +67,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         date
         date: 'dd/MM/yyyy'
         percent
+        slice:start:end+1
         
 
