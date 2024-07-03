@@ -10,5 +10,5 @@ export class AppComponent {
   // mobiles:string[]=['redmi','realmi','samsung','oppo','vivo'];
   num1:number=4;
   num2:number=2;
-  operator:string='+';
+  operator:string='';
 }
