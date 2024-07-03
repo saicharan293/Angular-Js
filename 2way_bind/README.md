@@ -63,4 +63,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         lowercase
         currency => default: dollars
         currency:'INR' => Indian rupees
+        json
+        date
+        date: 'dd/MM/yyyy'
+        
 

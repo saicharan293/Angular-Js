@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '2way_bind';
-  person={
-    'name':'sai charan',
-    'age':24,
-    'salary':20000
-  }
+  dob:Date=new Date();
 }
