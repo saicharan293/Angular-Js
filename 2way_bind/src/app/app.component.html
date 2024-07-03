@@ -1,24 +1,22 @@
 <h2>Angular js</h2>
 
 <hr>
-<!-- <h5>This is row wise setup</h5>
-<table border="1">
-  <tr  *ngFor="let m of movies">
-    <td>{{m}}</td>
-  </tr>
-</table> -->
-<h5>This is column wise setup</h5>
-
-<table border="1">
-  <th *ngIf="movies; then add_movies; else no_movies"></th>
-  <tr >
-    <ng-template #add_movies>
-      <td *ngFor="let m of movies">{{m}}</td>
-    </ng-template>
-  </tr>
+<table border="2">
   <tr>
-  <ng-template #no_movies>
-      <td>loading............</td>
-    </ng-template>
+    <td>content</td>
+    <td>index</td>
+    <td>even</td>
+    <td>odd</td>
+    <td>first</td>
+    <td>last</td>
+  </tr>
+  <tr *ngFor="let ele of mobiles;index as i;even as e;odd as o;first as f;last as l">
+    <td>{{ele}}</td>
+    <td>{{i}}</td>
+    <td>{{e}}</td>
+    <td>{{o}}</td>
+    <td>{{f}}</td>
+    <td>{{l}}</td>
   </tr>
 </table>
+

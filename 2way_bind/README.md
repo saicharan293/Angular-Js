@@ -33,7 +33,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         ngIf
                 ngIf,else
                 ngIf,then,else
-        ngFor
+        ngFor => variables: index, first, last, even, odd
+                *ngFor='let ele of arr;index as i'
         ngSwitch
 
 ## Attribute directives:
