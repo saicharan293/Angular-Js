@@ -5,11 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TestPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
+  transform(person: any, wish: string): string {
     // value is a variiable that stores the value of strings in html 
-    console.log(args);
-    console.log('company name is: ',value);
-    return "company name is confidential";
+    if(person.course=='angular' && person.gender=='m'){
+      return `${wish},mr ${person.name} let's learn ${person.course}`
+    }
+    else{
+      return `${wish},ms ${person.name} let's learn ${person.course}` 
+    }
   }
 
 }

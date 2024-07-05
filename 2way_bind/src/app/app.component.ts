@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '2way_bind';
-  company:string='Coleague solutions private limited';
-  
+  // person={
+  //   'name':'sai',
+  //   'gender':'m',
+  //   'course':'angular'
+  // }
+  person={
+    'name':'sati',
+    'gender':'f',
+    'course':'python'
+  }
+  wish:string='welcome'
+
 }
