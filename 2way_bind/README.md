@@ -69,4 +69,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         percent
         slice:start:end+1
         
-
+## Custom PIPE
+        ng g p -pipe-name
+        

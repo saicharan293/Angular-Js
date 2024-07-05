@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '2way_bind';
-  company:string='Coleague solutions private limited'
+  company:string='Coleague solutions private limited';
+  
 }
