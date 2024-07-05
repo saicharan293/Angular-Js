@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '2way_bind';
-
+  email:string='';
+  update(em:string){
+    this.email=em;
+  }
 }

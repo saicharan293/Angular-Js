@@ -1,4 +1,5 @@
 <h2>Angular js</h2>
 
 <input type="text" placeholder="enter email" value="mail@mail.com" #e>
-<div>{{e.value}}</div>
+<button (click)="update(e.value)">update</button>
+<div>{{email}}</div>
