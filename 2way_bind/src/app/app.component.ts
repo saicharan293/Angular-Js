@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = '2way_bind';
   email:string='';
-  childinParent='child component';
+  ParenttoChild:string='Parent to child';
+  PArray=[1,3,23,54,34];
 }

@@ -74,6 +74,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Parent to child communication
         @input()
+
+        app.component.ts
+                Parenttochild:string='parent to child';
+        header.component.ts
+                @Input() child:string:string='';
+        header.component.html
+                {{child}}
+        app.component.html
+                <app-header [child]='Parenttochild'>
+                
 ## Child to Parent communication
         @output()
 

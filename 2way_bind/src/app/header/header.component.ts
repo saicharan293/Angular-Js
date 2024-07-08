@@ -6,6 +6,7 @@ import { Component,Input } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @Input() childtitle: string='';
+  @Input() Parenttochild: string='';
+  @Input() Parray:number[]=[];
   constructor(){}
 }
