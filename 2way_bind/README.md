@@ -71,4 +71,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         
 ## Custom PIPE
         ng g p -pipe-name
+
+## Parent to child communication
+        @input()
+## Child to Parent communication
+        @output()
+
+        
         
