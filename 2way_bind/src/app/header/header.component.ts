@@ -6,15 +6,10 @@ import { Component,EventEmitter,Input, Output } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+  
   //from child to parent
-  data='This is for the reference variable'
-  ref_demo(){
-    return 'reference function'
-  }
-  title='reference variable- demo'
-  constructor(){}
-  changeName(e:any){
-    this.data=e.target.value
+  childdata:string='pass this to parent component via view child';
+  passToParent(){
+    return this.childdata;
   }
 }

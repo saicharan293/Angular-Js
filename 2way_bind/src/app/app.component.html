@@ -1,6 +1,5 @@
 
-<h3>Parent component: {{child.data}}</h3>
-
-{{child.ref_demo()}}
- <app-header #child></app-header>
-<h4>Parent : {{child.title}}</h4>
+<h3>Parent component</h3>
+ <app-header></app-header>
+ <button (click)="test()">Click</button><br>
+ <div>Data from child:{{childdata}}</div> 

@@ -107,5 +107,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
                 }
         header.component.html
                 <input type="text" (input)="updateMessage($event)">
+
+## Using View child
+        header.component.ts
+                childdata:string='pass this to parent component via view child';
+                passToParent(){
+                        return this.childdata;
+                }
+
+        app.component.ts
+                @ViewChild(HeaderComponent)
+                header: HeaderComponent = new HeaderComponent; // Added type annotation
+
+                test() {
+                        console.log(this.header.passToParent());// (or)
+                        console.log(this.header.childdata);
+                }
+        app.component.html
+                 <button (click)="test()">Click</button>
         
         
