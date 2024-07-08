@@ -1,6 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
-
+import {Component, ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,12 +7,14 @@ import { HeaderComponent } from './header/header.component';
 export class AppComponent { // Implement AfterViewInit
   title = '2way_bind';
 
-  @ViewChild(HeaderComponent)
-  header: HeaderComponent = new HeaderComponent; // Added type annotation
+  @ViewChild('test')
+  data!: ElementRef; // Added type annotation
 
-  childdata='';
-  test() {
-    // console.log(this.header.passToParent());
-    this.childdata=this.header.passToParent();
+  //To give first access to view child, ngAfterViewInit is used
+  ngAfterViewInit(){
+    console.log(this.data.nativeElement)
+    this.data.nativeElement.onkeyup=()=>{
+      console.log(this.data.nativeElement.value)
+    }
   }
 }
