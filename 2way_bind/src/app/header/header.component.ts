@@ -8,16 +8,13 @@ import { Component,EventEmitter,Input, Output } from '@angular/core';
 export class HeaderComponent {
 
   //from child to parent
-  @Output() custEvent=new EventEmitter();
-  messageToParent:string='passed to parent';
-
-  passToParent(){
-    this.custEvent.emit(this.messageToParent)
+  data='This is for the reference variable'
+  ref_demo(){
+    return 'reference function'
   }
-
-  //update from child to parent
-  updateMessage(e:any){
-    this.messageToParent=e.target.value;
-  }
+  title='reference variable- demo'
   constructor(){}
+  changeName(e:any){
+    this.data=e.target.value
+  }
 }

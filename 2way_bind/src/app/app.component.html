@@ -1,5 +1,6 @@
 
-<h3>Parent component: {{cdata}}</h3>
+<h3>Parent component: {{child.data}}</h3>
 
-<!-- <app-header (custEvent)="cdata=$event"></app-header> -->
-<app-header (custEvent)="updatedata($event)"></app-header>
+{{child.ref_demo()}}
+ <app-header #child></app-header>
+<h4>Parent : {{child.title}}</h4>
