@@ -87,5 +87,25 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Child to Parent communication
         @output()
 
+        header.component.ts
+                @Output() custEvent=new EventEmitter();
+                messageToParent:string='Passed to parent';
+                passToParent(){
+                        this.custEvent.emit(this.messageToParent)
+                }
+        
+        header.component.html
+                <button (click)="passToParent()">Pass to Parent</button>
+        app.component.html              
+                <h3>{{cdata}}</h3>
+                <app-header (custEvent)="cdata=$event"></app-header>
+
+## updating from child to parent
+        header.component.ts
+                updateMessage(e:any){
+                        this.messageToParent=e.target.value;
+                }
+        header.component.html
+                <input type="text" (input)="updateMessage($event)">
         
         

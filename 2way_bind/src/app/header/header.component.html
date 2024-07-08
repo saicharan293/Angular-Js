@@ -1,7 +1,4 @@
-<!-- <h2>child component</h2>
-<p>header works!</p> -->
-<h3>{{Parenttochild}}</h3>
-
-<div *ngFor="let ele of Parray">
-    <h4>{{ele}}</h4>
-</div>
+<button (click)="passToParent()">Pass to Parent</button>
+<input type="text" (input)="updateMessage($event)">
+<h3>child component:{{messageToParent}}</h3>
+<!-- <p>header works!</p> -->

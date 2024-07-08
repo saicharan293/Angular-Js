@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '2way_bind';
-  email:string='';
-  ParenttoChild:string='Parent to child';
-  PArray=[1,3,23,54,34];
+  cdata:any;
+  updatedata(d:any){
+    this.cdata=d;
+  }
 }

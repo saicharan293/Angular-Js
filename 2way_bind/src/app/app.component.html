@@ -1,2 +1,5 @@
-<h2>Parent component</h2>
-<app-header [Parenttochild]="ParenttoChild" [Parray]="PArray"></app-header>
+
+<h3>Parent component: {{cdata}}</h3>
+
+<!-- <app-header (custEvent)="cdata=$event"></app-header> -->
+<app-header (custEvent)="updatedata($event)"></app-header>
