@@ -6,5 +6,6 @@ import {Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angul
 })
 export class AppComponent { // Implement AfterViewInit
   title = '2way_bind';
+  
 
 }

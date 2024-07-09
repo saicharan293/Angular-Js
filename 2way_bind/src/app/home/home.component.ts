@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TestService } from '../test.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  constructor(private testservice:TestService){
 
+  }
+  mobiles=this.testservice.mobiles;
 }

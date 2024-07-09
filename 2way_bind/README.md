@@ -128,5 +128,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Routing
         routerModule, routerLink (instead of href for routing), routerLinkActive, router-outlet, path, routes are the key terms used in routing
-        
+
+# Services
+        Service is a class that has data(properties) or methods
+## syntax of creating service
+        ng g s --service-name
         

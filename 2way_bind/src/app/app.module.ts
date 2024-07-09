@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule,Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { TestService } from './test.service';
 
 const routes:Routes=[
   {
@@ -43,7 +44,7 @@ const routes:Routes=[
     FormsModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [TestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
