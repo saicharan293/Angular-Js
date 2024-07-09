@@ -4,8 +4,21 @@
 this can be avoided by using routerLink -->
 <ul>
     <li>
-        <a routerLink="/users" routerLinkActive="active">users</a>
+        <a routerLink="/products">All</a>
+    </li>
+    <li>
+        <a routerLink="/products" routerLinkActive="active" [queryParams]="{'category':'men'}">Men</a>
+    </li>
+    <li>
+        <a routerLink="/products" routerLinkActive="active" [queryParams]="{'category':'electronics'}">electronics</a>
+    </li>
+    <li>
+        <a routerLink="/products" routerLinkActive="active" [queryParams]="{'category':'women'}">women</a>
+    </li>
+    <li>
+        <a routerLink="/products" routerLinkActive="active" [queryParams]="{'category':'jewellary'}">jewellery</a>
     </li>
        
 </ul>
+<a routerLink="/products" [queryParams]="[{'pageno':8,'size':10}]"></a>
 

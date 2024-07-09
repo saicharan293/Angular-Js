@@ -133,4 +133,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         Service is a class that has data(properties) or methods
 ## syntax of creating service
         ng g s --service-name
+
+# Query params
+        <a routerLink='/prod' [queryParams]='{'category':'men'}'>Men</a>
         

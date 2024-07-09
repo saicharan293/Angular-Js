@@ -6,23 +6,18 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { TestPipe } from './test.pipe';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule,Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { UsersComponent } from './users/users.component';
-import { UsercardComponent } from './usercard/usercard.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductService } from './product.service';
 
 const routes:Routes=[
   {
     path:'',component:HomeComponent
   },
   {
-    path:'users',component:UsersComponent
-  },
-  {
-    path:'user/:id',component:UsercardComponent
+    path:'products',component:ProductsComponent
   },
   {
     path:"**",component:NotfoundComponent
@@ -35,11 +30,8 @@ const routes:Routes=[
     AppComponent,
     HeaderComponent,
     TestPipe,
-    AboutComponent,
-    ContactComponent,
     HomeComponent,
-    UsersComponent,
-    UsercardComponent
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +39,7 @@ const routes:Routes=[
     FormsModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
