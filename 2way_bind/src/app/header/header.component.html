@@ -1,3 +1,12 @@
 
-<h3>child component</h3>
-<input type="text" [(ngModel)]="childdata">
+
+<!-- href performs reloading of page every time you click on any link 
+this can be avoided by using routerLink -->
+<ul>
+    <li>
+        <a routerLink="/about" routerLinkActive="active">about</a>
+    </li>
+        <li>
+            <a routerLink="/contact" routerLinkActive="active">contact</a>
+        </li>
+</ul>
