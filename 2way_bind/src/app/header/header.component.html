@@ -18,6 +18,7 @@ this can be avoided by using routerLink -->
     <li>
         <a routerLink="/products" routerLinkActive="active" [queryParams]="{'category':'jewellary'}">jewellery</a>
     </li>
+    <button (click)="navigate()">click</button>
        
 </ul>
 <a routerLink="/products" [queryParams]="[{'pageno':8,'size':10}]"></a>

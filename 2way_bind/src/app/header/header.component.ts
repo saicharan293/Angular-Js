@@ -1,4 +1,5 @@
-import { Component,EventEmitter,Input, Output } from '@angular/core';
+import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -7,9 +8,15 @@ import { Component,EventEmitter,Input, Output } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  
-  constructor(){
+  constructor(private r:Router){
 
+  }   
+  navigate() {
+    this.r.navigate(['/home',4,'js'],{
+      queryParams:{'page':7,'size':20}
+    })
   }
+  
+  
   
 }
