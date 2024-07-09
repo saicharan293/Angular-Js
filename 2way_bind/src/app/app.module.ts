@@ -11,7 +11,6 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule,Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { TestService } from './test.service';
 import { UsersComponent } from './users/users.component';
 import { UsercardComponent } from './usercard/usercard.component';
 
@@ -20,14 +19,14 @@ const routes:Routes=[
     path:'',component:HomeComponent
   },
   {
-    path:'about',component:AboutComponent
+    path:'users',component:UsersComponent
   },
   {
-    path:'contact',component:ContactComponent
+    path:'user/:id',component:UsercardComponent
   },
   {
     path:"**",component:NotfoundComponent
-  }
+  },
   
 ]
 
@@ -48,7 +47,7 @@ const routes:Routes=[
     FormsModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [TestService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

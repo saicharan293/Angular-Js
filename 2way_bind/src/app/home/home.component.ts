@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TestService } from '../test.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +6,6 @@ import { TestService } from '../test.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  constructor(public testservice:TestService){
 
-  }
+  
 }
