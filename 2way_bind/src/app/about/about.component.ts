@@ -7,6 +7,5 @@ import { TestService } from '../test.service';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  constructor(private testService:TestService){}
-  mobiles=this.testService.mobiles;
+  constructor(public testService:TestService){}
 }

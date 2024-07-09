@@ -7,9 +7,9 @@ import { TestService } from '../test.service';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
-  constructor(private testService:TestService){}
-  mobiles=this.testService.mobiles
+  constructor(public testService:TestService){}
+  
   addMobile(){
-    this.mobiles.push('apple')
+    this.testService.mobiles.push('apple')
   }
 }

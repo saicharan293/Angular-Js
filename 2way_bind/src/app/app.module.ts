@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule,Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { TestService } from './test.service';
+import { UsersComponent } from './users/users.component';
+import { UsercardComponent } from './usercard/usercard.component';
 
 const routes:Routes=[
   {
@@ -36,7 +38,9 @@ const routes:Routes=[
     TestPipe,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    UsersComponent,
+    UsercardComponent
   ],
   imports: [
     BrowserModule,

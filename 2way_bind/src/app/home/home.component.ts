@@ -7,8 +7,7 @@ import { TestService } from '../test.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  constructor(private testservice:TestService){
+  constructor(public testservice:TestService){
 
   }
-  mobiles=this.testservice.mobiles;
 }
