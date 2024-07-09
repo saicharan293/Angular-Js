@@ -125,5 +125,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
                 }
         app.component.html
                  <button (click)="test()">Click</button>
+
+## Routing
+        routerModule, routerLink (instead of href for routing), routerLinkActive, router-outlet, path, routes are the key terms used in routing
         
         
