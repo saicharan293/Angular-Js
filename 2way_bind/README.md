@@ -139,3 +139,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         
 # Load different component in other component
 -> can be done using child routing
+
+# Route Guards
+
+        CanActivate => permit the route to go for required destination
+        CanDeactivate
+        Resolve
+        CanLoad
+        CanActivateChild

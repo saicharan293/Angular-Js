@@ -9,12 +9,5 @@ export class AppComponent {
   // Implement AfterViewInit
   title = '2way_bind';
   constructor(private http: HttpClient) {}
-  data:any=null;
-  getData() {
-    this.http
-      .get('https://fakestoreapi.com/products?limit=5')
-      .subscribe((d) => {
-        this.data=d;
-      });
-  }
+  
 }

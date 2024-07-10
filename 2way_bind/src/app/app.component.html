@@ -1,20 +1,4 @@
 <app-header></app-header>
-<!-- <h2>this is app component</h2> -->
- <button (click)="getData()" *ngIf="!data">Get Data</button>
- <div *ngIf="data">
-    <table border="2">
-        <tr>
-
-            <th>Id</th>
-            <th>Name</th>
-            <th>price</th>
-        </tr>
-            <tr *ngFor="let product of data">
-            <td>{{product.id}}</td>
-            <td class="title">{{product.title}}</td>
-            <td>{{product.price}}</td>
-        </tr>
-    </table>
- </div>
-
-<!-- <router-outlet></router-outlet> -->
+<h2>this is app component</h2>
+ 
+<router-outlet></router-outlet>
