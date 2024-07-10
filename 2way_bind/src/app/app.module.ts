@@ -9,17 +9,30 @@ import { TestPipe } from './test.pipe';
 import { HomeComponent } from './home/home.component';
 import { RouterModule,Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { ProductsComponent } from './products/products.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { Homechild1Component } from './homechild1/homechild1.component';
+import { Homechild2Component } from './homechild2/homechild2.component';
 import { ProductService } from './product.service';
 
 const routes:Routes=[
   {
     path:'',component:HomeComponent
   },
-  {path:'home/:id/:test',component:HomeComponent},
   {
-    path:'products',component:ProductsComponent
+    path:'home',component:HomeComponent,
+    children:[
+      {
+        path:'homechild1',component:Homechild1Component,
+      },
+      {
+        path:'homechild2',component:Homechild2Component,
+      },
+    ]
   },
+  {path:'about',component:AboutComponent},
+  {path:'contact',component:ContactComponent},
+
   {
     path:"**",component:NotfoundComponent
   },
@@ -32,7 +45,10 @@ const routes:Routes=[
     HeaderComponent,
     TestPipe,
     HomeComponent,
-    ProductsComponent,
+    AboutComponent,
+    ContactComponent,
+    Homechild1Component,
+    Homechild2Component,
   ],
   imports: [
     BrowserModule,

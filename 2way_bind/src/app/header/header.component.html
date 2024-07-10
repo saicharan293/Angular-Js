@@ -4,22 +4,16 @@
 this can be avoided by using routerLink -->
 <ul>
     <li>
-        <a routerLink="/products">All</a>
+        <a routerLink="/" routerLinkActive="">Home</a>
     </li>
     <li>
-        <a routerLink="/products" routerLinkActive="active" [queryParams]="{'category':'men'}">Men</a>
+        <a routerLink="/about" routerLinkActive="active" >About</a>
     </li>
     <li>
-        <a routerLink="/products" routerLinkActive="active" [queryParams]="{'category':'electronics'}">electronics</a>
+        <a routerLink="/contact" routerLinkActive="active" >Contact</a>
     </li>
-    <li>
-        <a routerLink="/products" routerLinkActive="active" [queryParams]="{'category':'women'}">women</a>
-    </li>
-    <li>
-        <a routerLink="/products" routerLinkActive="active" [queryParams]="{'category':'jewellary'}">jewellery</a>
-    </li>
-    <button (click)="navigate()">click</button>
+    
+
        
 </ul>
-<a routerLink="/products" [queryParams]="[{'pageno':8,'size':10}]"></a>
 

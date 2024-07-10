@@ -8,15 +8,7 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  constructor(private r:Router){
+  constructor(){
 
-  }   
-  navigate() {
-    this.r.navigate(['/home',4,'js'],{
-      queryParams:{'page':7,'size':20}
-    })
-  }
-  
-  
-  
+  }     
 }
