@@ -1,0 +1,17 @@
+button{
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+table{
+    border: 2px solid grey;
+    /* width: 70%; */
+    border-collapse: collapse;
+}
+td{
+    padding: 5px 20px;
+}

@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { Homechild1Component } from './homechild1/homechild1.component';
 import { Homechild2Component } from './homechild2/homechild2.component';
 import { ProductService } from './product.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes:Routes=[
   {
@@ -45,16 +46,14 @@ const routes:Routes=[
     HeaderComponent,
     TestPipe,
     HomeComponent,
-    AboutComponent,
-    ContactComponent,
-    Homechild1Component,
-    Homechild2Component,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
