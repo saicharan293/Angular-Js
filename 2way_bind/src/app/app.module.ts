@@ -16,6 +16,7 @@ import { Homechild2Component } from './homechild2/homechild2.component';
 import { ProductService } from './product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './auth.service';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -27,7 +28,11 @@ const routes: Routes = [
     component: HomeComponent,
   },
   { 
-    path: 'about', component: AboutComponent },
+    path: 'about', component: AboutComponent 
+  },
+  { 
+    path: 'login', component: LoginComponent 
+  },
   { 
     path: 'contact', component: ContactComponent,canActivate:[AuthService]
   },
@@ -39,7 +44,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, TestPipe, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, TestPipe, HomeComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
