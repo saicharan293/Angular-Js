@@ -1,7 +1,7 @@
 npm install @angular/cli@16.0.0
 
 to create a new application => ng new --app-name  --no-standalone
-to run => npm start
+to run => npm start -o
 
 to create a component => ng generate component -commponent--name
 
