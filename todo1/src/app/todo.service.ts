@@ -18,4 +18,7 @@ export class TodoService {
   addTodo(task:any){
     this.todoList.push({id:this.taskid++,'task':task});
   }
+  deleteTodo(index:any){
+    this.todoList.splice(index,1)
+  }
 }

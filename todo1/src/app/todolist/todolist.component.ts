@@ -13,4 +13,7 @@ export class TodolistComponent implements OnInit {
   ngOnInit():void{
     this.todos=this.ts.todoList
   }
+  removeTodo(index:any){
+    this.ts.deleteTodo(index);
+  }
 }

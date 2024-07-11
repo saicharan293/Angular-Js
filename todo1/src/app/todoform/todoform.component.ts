@@ -12,6 +12,9 @@ export class TodoformComponent {
   constructor(private ts:TodoService){}
   addTask(){
     this.ts.addTodo(this.todoInput);
+    this.todoInput='';
   }
-  resetForm(){}
+  resetForm(){
+    this.todoInput='';
+  }
 } 
