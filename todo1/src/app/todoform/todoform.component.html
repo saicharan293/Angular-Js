@@ -3,10 +3,13 @@
     <div class="col-6">
         <div class="form-group">
             <label for="newTask">Add New Task</label>
-            <input type="text" name="" id="newTask" class="form-control">
+            <input type="text" name="" id="newTask" class="form-control" [(ngModel)]="todoInput">
         </div>
     </div>
-    <div class="col-3">
-        <button class="btn btn-success">Add</button>
+    <div class="col-3 mt-4">
+        <button class="btn btn-success" (click)="addTask()" [disabled]="!todoInput">Add</button>
+    </div>
+    <div class="col-3 mt-4">
+        <button class="btn btn-danger" (click)="resetForm()" [disabled]="!todoInput">Reset</button>
     </div>
 </div>
