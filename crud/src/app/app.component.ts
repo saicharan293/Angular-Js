@@ -8,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'crud';
 
-  mobiles:any=true;
+  mobiles:any=[
+    {
+      name:'xyz',
+      price:20000,
+      ram:6,
+      storage:64
+    },
+    {
+      name:'abc',
+      price:22000,
+      ram:4,
+      storage:32
+    },
+  ];
   ngOnInit(): void {
     
   }
+ 
 
 }
