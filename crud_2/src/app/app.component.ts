@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crud_2';
-  sidebaropen:boolean=true;
+  sidebaropen:boolean=false;
   toggleSideBar(){
     this.sidebaropen=this.sidebaropen?false:true;
   }
