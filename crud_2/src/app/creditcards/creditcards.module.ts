@@ -7,6 +7,7 @@ import { AddComponent } from './add/add.component';
 import { ViewComponent } from './view/view.component';
 import { DeleteComponent } from './delete/delete.component';
 import { EditComponent } from './edit/edit.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { EditComponent } from './edit/edit.component';
   ],
   imports: [
     CommonModule,
-    CreditcardsRoutingModule
+    CreditcardsRoutingModule,
+    MatCardModule
+    
   ]
 })
 export class CreditcardsModule { }
