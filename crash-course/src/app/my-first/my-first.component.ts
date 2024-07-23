@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './my-first.component.scss'
 })
 export class MyFirstComponent {
+
   name:string='';
   email:string='';
   message:string='';
+  onSubmit() {
+    console.log(this.name)
+  }
+  
 }
