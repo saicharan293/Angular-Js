@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 export class MyFirstComponent {
 
-  myname:string='';
-  email:string='';
-  message:string='';
+
+  myname:string='sai';
+  email:string='sai@gmail.com';
+  message:string='this is first message';
   isSubmitted:boolean=true;
   messages:Array<any>=[];
   onSubmit() {
@@ -19,9 +20,13 @@ export class MyFirstComponent {
       'email':this.email,
       'message':this.message
     })
-    this.myname='';
-    this.email='';
-    this.message='';
+    // this.myname='';
+    // this.email='';
+    // this.message='';
+    
+  }
+  deleteMessage(index: number) {
+    this.messages.splice(index,1);
   }
   
 }

@@ -53,7 +53,7 @@
     </tbody>
   </table> -->
   <div class="flex-container" *ngIf="isSubmitted">
-    <app-message-details *ngFor="let mes of messages;let i = index" [messageList]="mes"></app-message-details>
+    <app-message-details *ngFor="let mes of messages;let i = index" [messageList]="mes" [index]="i"(delete)="deleteMessage($event)"></app-message-details>
      
   </div>
 </div>
