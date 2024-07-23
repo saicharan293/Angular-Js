@@ -10,7 +10,9 @@ export class MyFirstComponent {
   myname:string='';
   email:string='';
   message:string='';
+  isSubmitted:boolean=false;
   onSubmit() {
+    this.isSubmitted=true;
     console.log(this.myname)
   }
   
