@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MyFirstService } from '../services/my-first.service';
 
 @Component({
@@ -15,7 +15,14 @@ export class MyFirstComponent {
   isSubmitted:boolean=true;
   messages:Array<any>=[];
 
-  constructor(private service:MyFirstService){
+  //this is property injection for service, 
+  //since service is separated from constructor and written outside
+
+  private service:MyFirstService=inject(MyFirstService);
+
+  //this is called constructor injection, since we are using constructor to 
+  //initialise the service and use it
+  constructor(){
     this.messages=this.service.getAll();
     this.isSubmitted=this.messages.length > 0;
   }
