@@ -33,19 +33,21 @@
     </div>
     <button type="submit">Submit</button>
   </form>
-  <table>
+  <table *ngIf="isSubmitted">
     <thead>
         <tr>
+            <th>#</th>
             <th>Name</th>
             <th>Email</th>
             <th>Message</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>aaa</td>
-            <td>aaa</td>
-            <td>aaa</td>
+        <tr *ngFor="let mes of messages;let i = index">
+            <td>{{i+1}}</td>
+            <td>{{mes.name}}</td>
+            <td>{{mes.email}}</td>
+            <td>{{mes.message}}</td>
         </tr>
     </tbody>
   </table>
