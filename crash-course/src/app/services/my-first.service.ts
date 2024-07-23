@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+//to provide service at application starter, 
+//include service in providers in app.module.ts
+@Injectable()
 export class MyFirstService {
 
   messages:Array<any>=[];
-  
-  //this is called constructor injection, since we are using constructor to 
-  //initialise the service and use it
+
   constructor() { 
     this.init();
   }

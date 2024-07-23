@@ -15,14 +15,12 @@ export class MyFirstComponent {
   isSubmitted:boolean=true;
   messages:Array<any>=[];
 
-  //this is property injection for service, 
-  //since service is separated from constructor and written outside
 
-  private service:MyFirstService=inject(MyFirstService);
+  
 
   //this is called constructor injection, since we are using constructor to 
   //initialise the service and use it
-  constructor(){
+  constructor(private service:MyFirstService){
     this.messages=this.service.getAll();
     this.isSubmitted=this.messages.length > 0;
   }
