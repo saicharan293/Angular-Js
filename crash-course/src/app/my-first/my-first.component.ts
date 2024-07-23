@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class MyFirstComponent {
 
-  name:string='';
+  myname:string='';
   email:string='';
   message:string='';
   onSubmit() {
-    console.log(this.name)
+    console.log(this.myname)
   }
   
 }
