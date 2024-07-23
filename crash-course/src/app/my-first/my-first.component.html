@@ -33,10 +33,20 @@
     </div>
     <button type="submit">Submit</button>
   </form>
-  <div *ngIf="isSubmitted">
-    <h3>Form data:</h3>
-    <p><strong>Name: </strong>{{ myname }}</p>
-    <p><strong>Email: </strong>{{ email }}</p>
-    <p><strong>Message: </strong>{{ message }}</p>
-  </div>
+  <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>aaa</td>
+            <td>aaa</td>
+            <td>aaa</td>
+        </tr>
+    </tbody>
+  </table>
 </div>
