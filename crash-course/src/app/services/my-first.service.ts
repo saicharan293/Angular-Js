@@ -6,6 +6,9 @@ import { Injectable } from '@angular/core';
 export class MyFirstService {
 
   messages:Array<any>=[];
+  
+  //this is called constructor injection, since we are using constructor to 
+  //initialise the service and use it
   constructor() { 
     this.init();
   }
