@@ -1,5 +1,5 @@
 .form-container{
-    max-width: 450px;
+    max-width: 460px;
     margin: auto;
     padding: 5px;
     border: 1px solid #ccc;
@@ -62,9 +62,10 @@ table {
   tbody tr:nth-child(even) {
     background-color: #f9f9f9;
   }
+  
   .flex-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }

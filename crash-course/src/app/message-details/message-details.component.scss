@@ -1,0 +1,21 @@
+.message-card{
+    width: 110px;
+    margin: 10px;
+    height: 175px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+}
+
+.message-header{
+    background-color: #4caf50;
+    color: white;
+    padding: 4px;
+    border-radius: 4px 4px 0 0;
+    overflow-wrap: break-word;
+}
+.message-content{
+    // padding: 10px;
+    border-radius: 0 0 4px 4px;
+}

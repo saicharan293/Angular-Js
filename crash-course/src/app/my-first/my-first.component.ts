@@ -10,7 +10,7 @@ export class MyFirstComponent {
   myname:string='';
   email:string='';
   message:string='';
-  isSubmitted:boolean=false;
+  isSubmitted:boolean=true;
   messages:Array<any>=[];
   onSubmit() {
     this.isSubmitted=true;

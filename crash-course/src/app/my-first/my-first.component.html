@@ -26,14 +26,15 @@
       <textarea
         name="message"
         id="message"
-        rows="4"
+        rows="1"
         [(ngModel)]="message"
         required
       ></textarea>
     </div>
     <button type="submit">Submit</button>
   </form>
-  <table *ngIf="isSubmitted">
+  <br>
+  <!-- <table *ngIf="isSubmitted">
     <thead>
         <tr>
             <th>#</th>
@@ -50,5 +51,9 @@
             <td>{{mes.message}}</td>
         </tr>
     </tbody>
-  </table>
+  </table> -->
+  <div class="flex-container" *ngIf="isSubmitted">
+    <app-message-details *ngFor="let mes of messages;let i = index" [messageList]="mes"></app-message-details>
+     
+  </div>
 </div>
