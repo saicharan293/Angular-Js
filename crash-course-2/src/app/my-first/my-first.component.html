@@ -1,6 +1,6 @@
 <div class="form-container">
     <h2>Simple Form</h2>
-    <form >
+    <form (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="name">name:</label>
             <input type="text" name="name" id="name" [(ngModel)]="name" required>
@@ -13,12 +13,30 @@
             <label for="message">message:</label>
             <textarea name="message" id="message" rows="1" [(ngModel)]="message" required></textarea>
         </div>
-        <button type="submit" (click)="onSubmit()">Submit</button>
+        <button type="submit" >Submit</button>
     </form>
-    <div>
-        <h3>Form Data: </h3>
-        <p><strong>Name:</strong>{{name}}</p>
-        <p><strong>Email:</strong>{{email}}</p>
-        <p><strong>Message:</strong>{{message}}</p>
-    </div>
+    <!-- <div > -->
+        <!-- <table *ngIf="isSubmitted">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let det of details; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{det.name}}</td>
+                    <td>{{det.email}}</td>
+                    <td>{{det.message}}</td>
+                </tr>
+            </tbody>
+        </table> -->
+    <!-- </div> -->
+     <div class="flex-container parent">
+        <cc-message-details class="child" *ngFor="let det of details; let i=index" [detail]="det"
+        ></cc-message-details>       
+     </div>
 </div>
