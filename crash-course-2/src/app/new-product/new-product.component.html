@@ -1,0 +1,24 @@
+
+<form action="" (ngSubmit)="saveProduct()">
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" name="title" [(ngModel)]="products.title" id="title">
+    </div>
+    <div>
+        <label for="price">Price:</label>
+        <input type="number" name="price" [(ngModel)]="products.price" id="price">
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <textarea rows="1" name="description" [(ngModel)]="products.description" id="description"></textarea>
+    </div>
+    <div>
+        <label for="image">Image url:</label>
+        <input type="text" name="image" [(ngModel)]="products.image" id="image">
+    </div>
+    <div>
+        <label for="category">category:</label>
+        <input type="text" name="category" [(ngModel)]="products.category" id="category">
+    </div>
+    <button type="submit">Save Product</button>
+</form>
