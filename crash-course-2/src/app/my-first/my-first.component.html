@@ -36,7 +36,11 @@
         </table> -->
     <!-- </div> -->
      <div class="flex-container parent">
-        <cc-message-details class="child" *ngFor="let det of details; let i=index" [detail]="det"
+        <cc-message-details class="child" 
+        *ngFor="let det of details; let i=index" 
+        [detail]="det" 
+        [index]="i"
+        (delete)="deleteMessage($event)"
         ></cc-message-details>       
      </div>
 </div>
