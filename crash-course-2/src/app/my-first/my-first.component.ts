@@ -15,12 +15,9 @@ export class MyFirstComponent {
   isSubmitted:boolean=false;
 
   details:Array<any>=[];
-  
-  //property injection for service
-  private service:MyFirstService=inject(MyFirstService);
 
-  //constructor injection for service
-  constructor(){
+  
+  constructor(private service:MyFirstService){
     this.details=this.service.getAllDetails();
     this.isSubmitted=this.details.length>0;
 
