@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-with-Harry';
+  public isActive:boolean = true;
   constructor(){
     setTimeout(() => {
       this.title="change title2 "
     }, 2000);
   }
+
 
 }
