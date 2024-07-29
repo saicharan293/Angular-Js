@@ -1,14 +1,15 @@
 <!-- <p>todos component -> parent component</p> -->
-
-<app-add-todo (add)="addTodo($event)"></app-add-todo>
-<h4>Your Todos</h4>
-<div *ngIf="this.todos.length===0;else elseblock" class="text-center">No Todos to display</div>
-<ng-template #elseblock>
-    <div *ngFor="let todo of todos; index as i">
-        <app-todo-item [todo]="todo" (delete)="deleteTodo($event)" (checkBox)="toggleTodo($event)" [i]="i"></app-todo-item>
-    </div>
-</ng-template>
-
+<div class="container">
+    <h1 class="text-center mb-3">Todos by Sai Charan</h1>
+    <app-add-todo (add)="addTodo($event)"></app-add-todo>
+    <h4>Your Todos</h4>
+    <div *ngIf="this.todos.length===0;else elseblock" class="text-center">No Todos to display</div>
+    <ng-template #elseblock>
+        <div *ngFor="let todo of todos; index as i">
+            <app-todo-item [todo]="todo" (delete)="deleteTodo($event)" (checkBox)="toggleTodo($event)" [i]="i"></app-todo-item>
+        </div>
+    </ng-template>
+</div>
 <!-- <p>add-todo-> child component</p> -->
 <!-- <p>todo-item -> child component</p> -->
 
