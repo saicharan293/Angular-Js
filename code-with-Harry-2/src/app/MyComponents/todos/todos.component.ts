@@ -7,8 +7,9 @@ import { Todo } from '../../Todo';
   styleUrl: './todos.component.css'
 })
 export class TodosComponent {
-  todos:Todo[]=[];
-  localItem:any;
+  
+  todos:Todo[];
+  localItem:string | any;
   constructor(){
     this.localItem=localStorage.getItem('todos')
     if(this.localItem==null){
@@ -29,8 +30,13 @@ export class TodosComponent {
 
   addTodo(todo:Todo){
     console.log(todo)
-    // const index=this.todos.indexOf(todo)
     this.todos.push(todo);
+    localStorage.setItem('todos',JSON.stringify(this.todos))
+  }
+
+  toggleTodo(todo:Todo){
+    const index=this.todos.indexOf(todo)
+    this.todos[index].active=!this.todos[index].active;
     localStorage.setItem('todos',JSON.stringify(this.todos))
   }
 
