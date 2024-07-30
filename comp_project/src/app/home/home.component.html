@@ -14,15 +14,8 @@
                     <div class="detail">
                         <div class="name">{{movie.name}}</div>
                         <div class="rating">
-                            <ng-template #t let-fill="fill">
-                                <i class="bi-heart-fill">
-                                    @if (fill > 0) {
-                                        <i class="bi-heart-fill filled" [style.width.%]="fill"></i>
-                                    }
-                                </i>
-                            </ng-template>
-                            
-                            <ngb-rating [(rate)]="movie.rating" [starTemplate]="t" [readonly]="true" [max]="5" [ariaValueText]="ariaValueText" />
+
+                            <ngb-rating [(rate)]="movie.rating" [max]="5" />
                         </div>
                     </div>
                 </div>
