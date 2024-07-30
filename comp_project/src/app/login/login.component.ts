@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  uname="";
+  password="";
+  errorMsg=""
+  login(){
+    if(this.uname.trim().length==0){
+      this.errorMsg="Username is required"
+    }else if(this.password.trim().length===0){
+      this.errorMsg="password is required"
+    } else{
+      this.errorMsg='';
+    }
+  }
 }

@@ -52,8 +52,15 @@
             font-weight: bold;
         }
         .btn-container{
+            position: relative;
             .btn{
                 margin-top: 10px;
+            }
+            .error{
+                position: absolute;
+                top: 32px;
+                right: 0;
+                color: red;
             }
         }
     }
