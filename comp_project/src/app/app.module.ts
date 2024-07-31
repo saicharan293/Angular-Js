@@ -10,6 +10,7 @@ import { MovieComponent } from './movie/movie.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { FeatureModule } from './feature/feature.module';
 
 @NgModule({
   declarations: [
@@ -24,8 +25,7 @@ import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgbModule,
-    NgbRatingModule
+    FeatureModule
   ],
   providers: [],
   bootstrap: [AppComponent]
