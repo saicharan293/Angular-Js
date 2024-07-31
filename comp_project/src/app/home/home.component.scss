@@ -35,6 +35,7 @@
                 position: relative;
                 height: 290px;
                 .img{
+                    cursor: pointer;
                     width: 100%;
                     border-radius: 5px;
                 }
@@ -88,7 +89,12 @@
                     cursor: pointer;
                 }
             }
-
+            .view-all{
+                cursor: pointer;
+                color: #ff9900;
+                margin-top: 30px;
+                text-align: right;
+            }
         }
     }
 }
