@@ -9,7 +9,6 @@ import { HeaderComponent } from './header/header.component';
 import { MovieComponent } from './movie/movie.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { NgbModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { FeatureModule } from './feature/feature.module';
 
 @NgModule({
@@ -18,14 +17,15 @@ import { FeatureModule } from './feature/feature.module';
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    MovieComponent
+    MovieComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    FeatureModule
+    FeatureModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,15 +5,18 @@
         display: flex;
         .left{
             width: 450px;
-            // margin-left: 110px;
             margin-top: 25px;
             .name{
                 font-size: 36px;
                 font-weight: bold;
             }
             .rating{
+                // background-color: aliceblue;
                 display: flex;
                 align-items: center;
+                gap: 20px;
+                justify-content: flex-start;
+                padding-left: 10px;
                 margin-bottom: 15px;
                 .rating-value{
                     margin-left: 20px;
