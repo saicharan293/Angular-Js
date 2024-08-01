@@ -13,6 +13,7 @@ export class MovieComponent implements OnInit {
   url='';
   movies:any;
   movie:any;
+  // isReadOnly:boolean=true;
 
   constructor(private route:ActivatedRoute,
     private http:HttpClient
