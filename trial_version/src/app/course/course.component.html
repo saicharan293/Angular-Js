@@ -4,77 +4,17 @@
 
 <!-- course list start -->
 <section class="container" id="courses">
-    <h1 class="text-center my-4 text-Danger">Course List</h1>
-    <div class="row">
-      <div class="col-md-4 col-sm-12 col-12 mb-2">
+    <h1 class="text-center my-4 text-Danger">{{name}}</h1>
+    <div class="row" >
+      <div class="col-md-4 col-sm-12 col-12 mb-2" *ngFor="let course of courseList">
         <div class="card">
-          <img src="/first.png" alt="">
+          <img src="/{{course.img}}" alt="">
           <div class="card-body">
-            <h3 class="card-title">Angular</h3>
+            <h3 class="card-title text-danger">{{course.name}}</h3>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?</p>
-            <button class="btn btn-primary"><i class="fa-solid fa-clock"> 60Hrs</i></button>
-            <button class="btn btn-danger mx-2"><i class="fa-solid fa-indian-rupee-sign">15000/-</i></button>
+            <button class="btn btn-primary"><i class="fa-solid fa-clock"> {{course.duration}}Hrs</i></button>
+            <button class="btn btn-danger mx-2"><i class="fa-solid fa-indian-rupee-sign">{{course.fee}}/-</i></button>
             <button class="btn btn-info text-sm">Read More</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12 col-12 mb-2">
-        <div class="card">
-          <img src="/second.jpeg" alt="">
-          <div class="card-body">
-            <h3 class="card-title">Node js</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?</p>
-            <button class="btn btn-primary"><i class="fa-solid fa-clock"> 45Hrs</i></button>
-            <button class="btn btn-danger mx-2"><i class="fa-solid fa-indian-rupee-sign">15000/-</i></button>
-            <button class="btn btn-info">Read More</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12 col-12 mb-2">
-        <div class="card">
-          <img src="/third.jpeg" alt="">
-          <div class="card-body">
-            <h3 class="card-title">Git and Git hub</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?</p>
-            <button class="btn btn-primary"><i class="fa-solid fa-clock"> 12Hrs</i></button>
-            <button class="btn btn-danger mx-2"><i class="fa-solid fa-indian-rupee-sign">6000/-</i></button>
-            <button class="btn btn-info">Read More</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12 col-12 mb-2">
-        <div class="card">
-          <img src="/fourth.png" alt="">
-          <div class="card-body">
-            <h3 class="card-title">MongoDB</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?</p>
-            <button class="btn btn-primary"><i class="fa-solid fa-clock"> 12Hrs</i></button>
-            <button class="btn btn-danger mx-2"><i class="fa-solid fa-indian-rupee-sign">6000/-</i></button>
-            <button class="btn btn-info">Read More</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12 col-12 mb-2">
-        <div class="card">
-          <img src="/fifth.jpeg" alt="">
-          <div class="card-body">
-            <h3 class="card-title">E js</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?</p>
-            <button class="btn btn-primary"><i class="fa-solid fa-clock"> 12Hrs</i></button>
-            <button class="btn btn-danger mx-2"><i class="fa-solid fa-indian-rupee-sign">6000/-</i></button>
-            <button class="btn btn-info">Read More</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12 col-12 mb-2">
-        <div class="card">
-          <img src="/sixth.png" alt="">
-          <div class="card-body">
-            <h3 class="card-title">Express js</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?</p>
-            <button class="btn btn-primary"><i class="fa-solid fa-clock"> 12Hrs</i></button>
-            <button class="btn btn-danger mx-2"><i class="fa-solid fa-indian-rupee-sign">6000/-</i></button>
-            <button class="btn btn-info">Read More</button>
           </div>
         </div>
       </div>
