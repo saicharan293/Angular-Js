@@ -24,15 +24,15 @@ export class HeaderComponent {
     sub:[
       {
         name:'Angular',
-        url:'/angular'
+        url:'/courses/angular'
       },
       {
         name:'Node js',
-        url:'/nodejs'
+        url:'/courses/nodejs'
       },
       {
         name:'Mongo Db',
-        url:'/mongodb'
+        url:'/courses/mongodb'
       },
     ]
     },

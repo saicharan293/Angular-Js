@@ -13,6 +13,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TableComponent } from './components/table/table.component';
+import { AngularComponent } from './course/angular/angular.component';
+import { NodejsComponent } from './course/nodejs/nodejs.component';
+import { MongodbComponent } from './course/mongodb/mongodb.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { TableComponent } from './components/table/table.component';
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    TableComponent
+    TableComponent,
+    AngularComponent,
+    NodejsComponent,
+    MongodbComponent
   ],
   imports: [
     BrowserModule,

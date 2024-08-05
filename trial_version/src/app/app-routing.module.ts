@@ -8,6 +8,9 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TableComponent } from './components/table/table.component';
+import { AngularComponent } from './course/angular/angular.component';
+import { NodejsComponent } from './course/nodejs/nodejs.component';
+import { MongodbComponent } from './course/mongodb/mongodb.component';
 
 const routes: Routes = [
   {
@@ -25,7 +28,21 @@ const routes: Routes = [
   },
   {
     path:'courses',
-    component:CourseComponent
+    component:CourseComponent,
+    children:[
+      {
+        path:'angular',
+        component:AngularComponent
+      },
+      {
+        path:'nodejs',
+        component:NodejsComponent
+      },
+      {
+        path:'mongodb',
+        component:MongodbComponent
+      },
+    ]
   },
   {
     path:'contact',
