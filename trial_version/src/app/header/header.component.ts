@@ -10,35 +10,56 @@ export class HeaderComponent {
   public navs=[
     {
     name:'Home',
-    url:'/'
+    url:'/',
+    sub:[]
     },
     {
     name:'About',
-    url:'/about-us'
+    url:'/about-us',
+    sub:[]
     },
     {
     name:'Courses',
-    url:'/courses'
+    url:'/courses',
+    sub:[
+      {
+        name:'Angular',
+        url:'/angular'
+      },
+      {
+        name:'Node js',
+        url:'/nodejs'
+      },
+      {
+        name:'Mongo Db',
+        url:'/mongodb'
+      },
+    ]
     },
     {
     name:'Contact',
-    url:'/contact'
+    url:'/contact',
+    sub:[]
     },
     {
     name:'Register',
-    url:'/register'
+    url:'/register',
+    sub:[]
     },
     {
     name:'Login',
-    url:'/login'
+    url:'/login',
+    sub:[]
     },
     {
     name:'Table',
-    url:'/table'
+    url:'/table',
+    sub:[]
     },
     {
     name:'Blob',
-    url:'/blob'
+    url:'/blob',
+    sub:[]
     },
      
   ]

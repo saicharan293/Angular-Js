@@ -8,8 +8,16 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav ms-auto" >
             <ng-container *ngFor="let nav of navs">
-              <li class="nav-item">
+              <li class="nav-item" *ngIf="nav.sub.length===0">
                 <a class="nav-link" [routerLink]="nav.url" routerLinkActive="active">{{nav.name}}</a>
+              </li>
+              <li class="nav-item dropdown" *ngIf="nav.sub.length>0">
+                <a class="nav-link dropdown-toggle" [routerLink]="" role="button" data-bs-toggle="dropdown">{{nav.name}}</a>
+                <ul class="dropdown-menu">
+                  <ng-container *ngFor="let sub of nav.sub">
+                    <li><a class="dropdown-item" [routerLink]="sub.url">{{sub.name}}</a></li>
+                  </ng-container>
+                </ul>
               </li>
             </ng-container>
           </ul>
