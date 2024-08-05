@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+interface Person{
+  email:string,
+  password:string,
+  cpassword:string
+}
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,4 +20,10 @@ export class LoginComponent {
   // type1(type:string){
   //   this.ty=type
   // }
+
+  pd:Person={
+    email:'',
+    password:'',
+    cpassword:''
+  }
 }

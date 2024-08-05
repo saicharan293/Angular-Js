@@ -17,7 +17,8 @@
             <h2>Login</h2>
         </div>
         <div class="card-body">
-            <form action="">
+            <!-- actual code  -->
+            <!-- <form action="">
                 <div class="mb-3 mt-3">
                     <label for="email">Email: </label>
                     <input type="email" name="email" placeholder="Enter email" class="form-control" id="email">
@@ -27,6 +28,28 @@
                     <input type="password" name="password" placeholder="Enter password" class="form-control" id="password">
                 </div>
                 <button class="btn btn-primary" type="submit">Login</button>
+                <p id="error" class="fw-bold"></p>
+                <p class="mt-w">If you don't have an account <a routerLink="/register" class="text-danger text-decoration-none">Register Here</a></p>
+            </form> -->
+            <!-- actual code ends here  -->
+            <form action="" #regForm="ngForm">
+                <div class="mb-3 mt-3">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" placeholder="Enter email" class="form-control" id="email" [(ngModel)]="pd.email" required #email="ngModel">
+                    <p class="text-danger fw-bold" *ngIf="email.invalid && email.touched">Enter your email</p>
+                </div>
+                <div class="mb-3">
+                    <label for="password">password: </label>
+                    <input type="password" name="password" placeholder="Enter password" class="form-control" id="password" [(ngModel)]="pd.password" required #password="ngModel">
+                    <p class="text-danger fw-bold" *ngIf="password.invalid && password.touched">Please Enter your password</p>
+                </div>
+                <div class="mb-3">
+                    <label for="cpassword">cpassword: </label>
+                    <input type="password" name="cpassword" placeholder="Enter cpassword" class="form-control" id="cpassword" [(ngModel)]="pd.cpassword" required #cpassword="ngModel">
+                    <p class="text-danger fw-bold" *ngIf="cpassword.invalid && cpassword.touched">Please Enter cpassword</p>
+                    <p class="text-danger fw-bold" *ngIf="pd.password!==pd.cpassword">Check the password again</p>
+                </div>
+                <button class="btn btn-primary" type="submit" [disabled]="regForm.invalid">Login</button>
                 <p id="error" class="fw-bold"></p>
                 <p class="mt-w">If you don't have an account <a routerLink="/register" class="text-danger text-decoration-none">Register Here</a></p>
             </form>
