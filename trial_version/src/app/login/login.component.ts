@@ -21,9 +21,13 @@ export class LoginComponent {
   //   this.ty=type
   // }
 
-  pd:Person={
-    email:'',
-    password:'',
-    cpassword:''
+  // pd:Person={
+  //   email:'',
+  //   password:'',
+  //   cpassword:''
+  // }
+
+  login(){
+
   }
 }
