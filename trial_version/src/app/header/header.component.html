@@ -6,25 +6,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/about-us" routerLinkActive="active">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/courses" routerLinkActive="active">Course</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
-            </li>
+          <ul class="navbar-nav ms-auto" >
+            <ng-container *ngFor="let nav of navs">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="nav.url" routerLinkActive="active">{{nav.name}}</a>
+              </li>
+            </ng-container>
           </ul>
         </div>
       </div>
