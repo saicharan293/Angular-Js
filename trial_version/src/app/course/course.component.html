@@ -7,13 +7,14 @@
     <h1 class="text-center my-4 text-Danger">{{name}}</h1>
     <div class="row" >
       <div class="col-md-4 col-sm-12 col-12 mb-2" *ngFor="let course of courseList">
+        {{course | json}}
         <div class="card">
           <img src="/{{course.img}}" alt="">
           <div class="card-body">
-            <h3 class="card-title text-danger">{{course.name}}</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?</p>
+            <h3 class="card-title text-danger">{{course.name | uppercase}}</h3>
+            <p class="card-text text-info">{{course.content | titlecase}}</p>
             <button class="btn btn-primary"><i class="fa-solid fa-clock"> {{course.duration}}Hrs</i></button>
-            <button class="btn btn-danger mx-2"><i class="fa-solid fa-indian-rupee-sign">{{course.fee}}/-</i></button>
+            <button class="btn btn-danger mx-2"><i class="fa-solid fa-indian-rupee-sign">{{course.fee }}/-</i></button>
             <button class="btn btn-info text-sm">Read More</button>
           </div>
         </div>
