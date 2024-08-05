@@ -1,21 +1,14 @@
 <app-header></app-header>
 <p>login works!</p>
 <div class="container mb-5">
-    <div class="row">
-        <div class="col-md-5 mx-auto">
-            <div class="card">
-                <div class="card-header text-center">
-                    <h3>Wish Message</h3>
-                </div>
-                <div class="card-body text-center">
-                    <h1>Hello, <span>{{wish}}</span></h1>
-                    <button class="btn btn-success" (click)="abc('Good Morning')">Morning</button>
-                    <button class="btn btn-danger mx-3" (click)="abc('Good Afternoon')">Afternoon</button>
-                    <button class="btn btn-warning" (click)="abc('Good Evening')" >Evening</button>
-                </div>
-            </div>
+    <h1>Show and Hide Password</h1>
+    <form action="">
+        <div class="input-group mb-3">
+            <input [type]="ty" name="" class="form-control" placeholder="Enter password" value="my password" id="">
+            <button class="btn btn-primary mx-2" type="button" (click)="type1('text')">Show</button>
+            <button class="btn btn-warning" type="button" (click)="type1('password')">Hide</button>
         </div>
-    </div>
+    </form>
 </div>
 
 
