@@ -6,9 +6,10 @@
 <section class="container" id="courses">
     <h1 class="text-center my-4 text-Danger">{{name}}</h1>
     <div class="row" >
-      <div class="col-md-4 col-sm-12 col-12 mb-2" *ngFor="let course of courseList">
-        {{course | json}}
-        <div class="card">
+      <ng-container *ngFor="let course of courseList">
+      <div class="col-md-4 col-sm-12 col-12 mb-2" *ngIf="course.type==='database'">
+        <!-- {{course | json}} -->
+        <div class="card" >
           <img src="/{{course.img}}" alt="">
           <div class="card-body">
             <h3 class="card-title text-danger">{{course.name | uppercase}}</h3>
@@ -19,6 +20,7 @@
           </div>
         </div>
       </div>
+    </ng-container>
       
     </div>
    </section>
