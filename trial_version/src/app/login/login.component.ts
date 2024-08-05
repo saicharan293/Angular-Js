@@ -11,8 +11,8 @@ export class LoginComponent {
   //   this.wish=interval
   // }
 
-  ty:string='password'
-  type1(type:string){
-    this.ty=type
-  }
+  // ty:string='password'
+  // type1(type:string){
+  //   this.ty=type
+  // }
 }

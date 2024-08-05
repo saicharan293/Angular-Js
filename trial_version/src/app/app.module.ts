@@ -16,6 +16,7 @@ import { TableComponent } from './components/table/table.component';
 import { AngularComponent } from './course/angular/angular.component';
 import { NodejsComponent } from './course/nodejs/nodejs.component';
 import { MongodbComponent } from './course/mongodb/mongodb.component';
+import{FormsModule,ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { MongodbComponent } from './course/mongodb/mongodb.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()
