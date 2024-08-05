@@ -1,3 +1,15 @@
 <app-header></app-header>
 <p>contact works!</p>
+<div class="card">
+    <div class="card-body mx-auto text-center">
+      <h4 class="card-title">Counter</h4>
+      <p class="card-text">Some example text. Some example text.</p>
+      <input type="number"  name="" [value]="num" readonly id=""> <br>
+      <div class="mt-2">
+          <button class="btn btn-primary" (click)="increment()">Increment</button>
+          <button class="btn btn-danger mx-2" (click)="decrement()">Decrement</button><br>
+          <button class="btn btn-success mt-2" (click)="reset()">Reset</button>
+        </div>
+    </div>
+  </div>
 <app-footer></app-footer>
