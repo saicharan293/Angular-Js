@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-
+  wish:string='...';
+  abc(interval:string){
+    this.wish=interval
+  }
 }
