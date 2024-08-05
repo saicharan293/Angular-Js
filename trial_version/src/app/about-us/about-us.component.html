@@ -11,4 +11,11 @@
     <div class="text-center"[ngStyle]="styling">
         <h1>Welcome to style binding</h1>
     </div>
+    <div class="text-center" [ngSwitch]="course">
+        <h1 *ngSwitchCase="'angular'">You choose Angular Course</h1>
+        <h1 *ngSwitchCase="'nodejs'">You choose Node js Course</h1>
+        <h1 *ngSwitchCase="'mongodb'">You choose Mongo db Course</h1>
+        <h1 *ngSwitchCase="'git'">You choose Git hub Course</h1>
+        <h1 *ngSwitchDefault>You didn't choose any course</h1>
+    </div>
  <app-footer></app-footer>

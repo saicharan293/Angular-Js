@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AboutUsComponent {
   color:string='red';
-  isDisable:boolean=false;
+  course:any='';
   styling:any={'color':'red','border':'2px solid blue','background-color':'yellow'}
 
   
