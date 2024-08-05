@@ -1,3 +1,14 @@
 <app-header></app-header>
-<p>about-us works!</p>
+    <div class="text-center" [ngClass]="color">
+        <h1>Welcome to class binding</h1>
+    </div>
+    <div class="text-center">
+
+        <button class="btn btn-danger" (click)="red()" >Red</button>
+        <button class="btn btn-primary mx-3"(click)="blue()">Blue</button>
+        <button class="btn btn-success"(click)="green()">Green</button>
+    </div>
+    <div class="text-center"[ngStyle]="styling">
+        <h1>Welcome to style binding</h1>
+    </div>
  <app-footer></app-footer>

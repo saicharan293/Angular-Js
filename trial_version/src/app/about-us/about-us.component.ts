@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrl: './about-us.component.css'
 })
 export class AboutUsComponent {
+  color:string='red';
+  isDisable:boolean=false;
+  styling:any={'color':'red','border':'2px solid blue','background-color':'yellow'}
 
+  
+  red(){
+    this.color='red'
+  }
+  green(){
+    this.color='green'
+  }
+  blue(){
+    this.color='blue'
+  }
 }

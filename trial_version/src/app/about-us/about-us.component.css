@@ -1,0 +1,17 @@
+div{
+    padding: 100px;
+    width: 80%;
+    margin: 30px auto;
+}
+.red{
+    background-color: red;
+    color: yellow;
+}
+.green{
+    background-color: greenyellow;
+    color: aqua;
+}
+.blue{
+    background-color: blue;
+    color: yellow;
+}
