@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 interface Person{
   email:string,
@@ -27,7 +28,21 @@ export class LoginComponent {
   //   cpassword:''
   // }
 
-  login(){
+  
+  //acts as two way binding
+  data:any=new FormGroup({
+    email:new FormControl('',Validators.required),
+    password:new FormControl('',Validators.required)
+  })
 
+  isSubmitted:boolean=false;
+
+  get form(){
+    return this.data.controls
+  }
+
+  login(){
+    this.isSubmitted=true;
+    console.log('mydata',this.data.value)
   }
 }

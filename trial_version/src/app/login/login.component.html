@@ -18,16 +18,19 @@
         </div>
         <div class="card-body">
             <!-- actual code  -->
-            <form action="" (submit)="login()">
+            <form action="" (submit)="login()" [formGroup]="data" >
                 <div class="mb-3 mt-3">
                     <label for="email">Email: </label>
-                    <input type="email" name="email" placeholder="Enter email" class="form-control" id="email">
+                    <input type="email" name="email" placeholder="Enter email" class="form-control " id="email" formControlName="email" required [ngClass]="isSubmitted && form.email.errors ? 'border border-danger':''">
+                    <p class="text-danger fw-bold" *ngIf="isSubmitted && form.email.errors">Enter email</p>
                 </div>
                 <div class="mb-3">
                     <label for="password">password: </label>
-                    <input type="password" name="password" placeholder="Enter password" class="form-control" id="password">
+                    <input type="password" name="password" placeholder="Enter password" class="form-control " id="password" formControlName="password" required [ngClass]="isSubmitted && form.password.errors ? 'border border-danger': '' ">
+                    <p class="text-danger fw-bold" *ngIf="isSubmitted && form.password.errors">Enter password</p>
+
                 </div>
-                <button class="btn btn-primary" type="submit">Login</button>
+                <button class="btn btn-primary" type="submit" [disabled]="data.invalid">Login</button>
                 <p id="error" class="fw-bold"></p>
                 <p class="mt-w">If you don't have an account <a routerLink="/register" class="text-danger text-decoration-none">Register Here</a></p>
             </form>
