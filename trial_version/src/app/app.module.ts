@@ -16,7 +16,7 @@ import { TableComponent } from './components/table/table.component';
 import { AngularComponent } from './course/angular/angular.component';
 import { NodejsComponent } from './course/nodejs/nodejs.component';
 import { MongodbComponent } from './course/mongodb/mongodb.component';
-import{FormsModule,ReactiveFormsModule} from '@angular/forms'
+import { FormsModule,ReactiveFormsModule } from '@angular/forms'
 import { provideHttpClient } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomedashboardComponent } from './dashboard/homedashboard/homedashboard.component';

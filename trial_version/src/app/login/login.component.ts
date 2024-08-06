@@ -1,12 +1,12 @@
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApiService } from '../service/api.service';
 
 interface Person{
   email:string,
   password:string,
-  cpassword:string
 }
 @Component({
   selector: 'app-login',
@@ -30,7 +30,7 @@ export class LoginComponent {
   //   cpassword:''
   // }
 
-  constructor(public http:HttpClient,
+  constructor(private api:ApiService,
     public r:Router
   ){}
 
@@ -52,26 +52,30 @@ export class LoginComponent {
   login(){
     const data=new FormData()
     this.isSubmitted=true;
-    localStorage.setItem('email','sai@gmail.com')
+
+    localStorage.setItem('email',this.data.value.email)
     console.log('mydata',this.data.value)
-    setTimeout(() => {
-      this.r.navigate(['/dashboard'])
-    }, 2000);
+    
 
 
+    //url performed here
+    data.append('userEmail',this.data.value.email)
+    data.append('userPassword',this.data.value.password)
+    this.api.login(data).subscribe((res:any)=>{
+      if(res.status==1){
+        this.color='green'
+        this.msg=res.message
+        console.log('msg',this.msg)
+        setTimeout(()=>{
+          this.r.navigate(['dashboard'])
+        },3000)
+      }else{
+        this.color='red'
+        this.msg=res.message
+        console.log('msg',this.msg)
 
-    // data.append('email',this.data.value.email)
-    // data.append('password',this.data.value.password)
-    // this.http.post('url',data).subscribe((res:any)=>{
-    //   if(res.status==1){
-    //     this.color='green'
-    //     this.msg=res.message
-    //     setTimeout(()=>{
-    //       this.r.navigate(['dashboard'])
-    //     },3000)
-    //   }else{
-    //     this.color='red'
-    //   }
-    // })
+        this.color='red'
+      }
+    })
   }
 }

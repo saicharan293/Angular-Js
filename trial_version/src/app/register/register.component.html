@@ -30,10 +30,9 @@
             <p class="text-danger fw-bold" *ngIf="password.touched && password.invalid">Enter password</p>
           </div>
           <div class="mb-3">
-            <label for="cpassword"><span class="text-danger">*</span>cpassword:</label>
-            <input type="password" name="cpassword" class="form-control" id="cpassword" placeholder="Enter cpassword" [(ngModel)]="student.cpassword" required #cpassword="ngModel">
-            <p class="text-danger fw-bold" *ngIf="cpassword.touched && cpassword.invalid">Enter confirm password</p>
-            <p class="text-danger fw-bold" *ngIf="student.password!==student.cpassword">Password does not match, Please check the passwords</p>
+            <label for="phone"><span class="text-danger">*</span>Phone:</label>
+            <input type="text" name="phone" class="form-control" id="phone" placeholder="Enter Phone" [(ngModel)]="student.phone" required #phone="ngModel">
+            <p class="text-danger fw-bold" *ngIf="phone.touched && phone.invalid">Enter Phone</p>
 
           </div>
           <button class="btn btn-primary" id="btn" (click)="reg()" [disabled]="regForm.invalid">Register</button>
