@@ -52,10 +52,14 @@ export class LoginComponent {
   login(){
     const data=new FormData()
     this.isSubmitted=true;
+    localStorage.setItem('email','sai@gmail.com')
     console.log('mydata',this.data.value)
     setTimeout(() => {
       this.r.navigate(['/dashboard'])
     }, 2000);
+
+
+
     // data.append('email',this.data.value.email)
     // data.append('password',this.data.value.password)
     // this.http.post('url',data).subscribe((res:any)=>{
