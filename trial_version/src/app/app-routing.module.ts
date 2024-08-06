@@ -11,6 +11,9 @@ import { TableComponent } from './components/table/table.component';
 import { AngularComponent } from './course/angular/angular.component';
 import { NodejsComponent } from './course/nodejs/nodejs.component';
 import { MongodbComponent } from './course/mongodb/mongodb.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomedashboardComponent } from './dashboard/homedashboard/homedashboard.component';
+import { UsersComponent } from './dashboard/users/users.component';
 
 const routes: Routes = [
   {
@@ -59,6 +62,20 @@ const routes: Routes = [
   {
     path:'table',
     component:TableComponent
+  },
+  {
+    path:'dashboard',
+    component:DashboardComponent,
+    children:[
+      {
+        path:'',
+        component:HomedashboardComponent
+      },
+      {
+        path:'users',
+        component:UsersComponent
+      }
+    ]
   },
   {
     path:'**',

@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 interface Person{
   email:string,
@@ -28,7 +30,11 @@ export class LoginComponent {
   //   cpassword:''
   // }
 
-  
+  constructor(public http:HttpClient,
+    public r:Router
+  ){}
+
+
   //acts as two way binding
   data:any=new FormGroup({
     email:new FormControl('',Validators.required),
@@ -40,9 +46,28 @@ export class LoginComponent {
   get form(){
     return this.data.controls
   }
-
+  
+  msg:any;
+  color:any;
   login(){
+    const data=new FormData()
     this.isSubmitted=true;
     console.log('mydata',this.data.value)
+    setTimeout(() => {
+      this.r.navigate(['/dashboard'])
+    }, 2000);
+    // data.append('email',this.data.value.email)
+    // data.append('password',this.data.value.password)
+    // this.http.post('url',data).subscribe((res:any)=>{
+    //   if(res.status==1){
+    //     this.color='green'
+    //     this.msg=res.message
+    //     setTimeout(()=>{
+    //       this.r.navigate(['dashboard'])
+    //     },3000)
+    //   }else{
+    //     this.color='red'
+    //   }
+    // })
   }
 }

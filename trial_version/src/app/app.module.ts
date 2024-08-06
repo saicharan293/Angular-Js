@@ -18,6 +18,9 @@ import { NodejsComponent } from './course/nodejs/nodejs.component';
 import { MongodbComponent } from './course/mongodb/mongodb.component';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { provideHttpClient } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomedashboardComponent } from './dashboard/homedashboard/homedashboard.component';
+import { UsersComponent } from './dashboard/users/users.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { provideHttpClient } from '@angular/common/http';
     TableComponent,
     AngularComponent,
     NodejsComponent,
-    MongodbComponent
+    MongodbComponent,
+    DashboardComponent,
+    HomedashboardComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
