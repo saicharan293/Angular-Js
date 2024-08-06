@@ -37,7 +37,7 @@
 
           </div>
           <button class="btn btn-primary" id="btn" (click)="reg()" [disabled]="regForm.invalid">Register</button>
-          <p id="error" class="fw-bold"></p>
+          <p id="error" class="fw-bold" [ngClass]="clr">{{msg}}</p>
           <p class="mt-3">If you have an account <a routerLink="/login" class="text-decoration-none">Login Here</a></p>
         </form>
       </div>

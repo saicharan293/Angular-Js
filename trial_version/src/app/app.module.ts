@@ -17,6 +17,7 @@ import { AngularComponent } from './course/angular/angular.component';
 import { NodejsComponent } from './course/nodejs/nodejs.component';
 import { MongodbComponent } from './course/mongodb/mongodb.component';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms'
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,10 +40,11 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
