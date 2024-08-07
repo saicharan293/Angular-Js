@@ -23,6 +23,8 @@ import { ChildComponent } from './components/child/child.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatModule } from './modules/mat/mat.module';
+import { CartComponent } from './components/cart/cart.component';
+// import { ProductsComponent } from './components/products/products.component';
 
 // import { LazytrailComponent } from './components/lazytrail/lazytrail.component';
 // import { NavdashboardComponent } from './dashboard/navdashboard/navdashboard.component';
@@ -46,6 +48,8 @@ import { MatModule } from './modules/mat/mat.module';
     ParentComponent,
     ChildComponent,
     AdminComponent,
+    CartComponent,
+    // ProductsComponent,
     // LazytrailComponent,
     // NavdashboardComponent,
   ],

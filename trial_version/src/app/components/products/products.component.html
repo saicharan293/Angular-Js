@@ -1,0 +1,32 @@
+
+<p>products works!</p>
+<div class="container ">
+    <h1 class="text-danger text-center">Products Page</h1>
+    <div class="buttondiv text-center  d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-primary mx-3" routerLink="/">Back to home</button>
+        <a routerLink="/cart" class="nav-link text-red"><i class="fa-solid fa-cart-shopping"></i> <span class="bg-danger p-2 m-2 rounded-circle" style="height: 10px; width: 10px;">{{cartNumber}}</span></a>
+    </div>
+    <!-- course list start -->
+    <section class="container" id="courses">
+        <h1 class="text-center my-4 text-Danger">Course List</h1>
+    <div class="row" >
+      <ng-container *ngFor="let course of courseList">
+      <div class="col-md-4 col-sm-12 col-12 mb-2">
+        <!-- {{course | json}} -->
+        <div class="card" >
+          <img src="/{{course.img}}" alt="">
+          <div class="card-body">
+            <h3 class="card-title text-danger">{{course.name | uppercase}}</h3>
+            <p class="card-text text-info">{{course.content | titlecase}}</p>
+            <button class="btn btn-primary"><i class="fa-solid fa-clock"> {{course.duration}}Hrs</i></button>
+            <button class="btn btn-danger mx-2" (click)="addToCart(course)"><i class="fa-solid fa-indian-rupee-sign">{{course.fee }}/-</i></button>
+            <button class="btn btn-info text-sm">Read More</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+      
+    </div>
+       </section>
+      <!-- course list end -->
+</div>

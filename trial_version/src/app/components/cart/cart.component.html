@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="text-center text-danger my-2" *ngIf="productsCount===0; else elseBlock">
+    <h1>Cart Empty</h1>
+    <button class="btn btn-primary" routerLink="/products">Go to Products page</button>
+</div>
+<ng-template #elseBlock>
+
+<div class="text-center container my-2" *ngIf="productsCount>0">
+    <table  class="table table-bordered table-hover table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Sno</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Content</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Angular</td>
+                <td><img src="/first.jpeg" alt=""></td>
+                <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum est quaerat repellat!</td>
+                <td>15000</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    
+</ng-template>
+
+<app-footer></app-footer>

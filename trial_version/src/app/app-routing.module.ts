@@ -13,6 +13,8 @@ import { NodejsComponent } from './course/nodejs/nodejs.component';
 import { MongodbComponent } from './course/mongodb/mongodb.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ProductsComponent } from './components/products/products.component';
 
 const routes: Routes = [
   {
@@ -81,6 +83,14 @@ const routes: Routes = [
   {
     path:'admin',
     component:AdminComponent
+  },
+  {
+    path:'products',
+    loadChildren:()=>import('./components/products/products.module').then(m=>m.ProductsModule)
+  },
+  {
+    path:'cart',
+    component:CartComponent
   },
   {
     path:'**',

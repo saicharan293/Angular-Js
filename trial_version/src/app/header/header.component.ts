@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { url } from 'inspector';
+import { CartService } from '../service/cart.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   public navs=[
     {
     name:'Home',
@@ -56,6 +57,24 @@ export class HeaderComponent {
     url:'/parent',
     sub:[]
     },
+    {
+      name:'Products',
+      url:'/products',
+      sub:[]
+    },
+    // {
+    // name:'Lazy',
+    // url:'/lazy',
+    // sub:[]
+    // },
      
   ]
+
+  constructor(public cSevice:CartService){}
+  cartCount:number=0
+  ngOnInit(): void {
+    // console.log(this.cSevice.getCartProducts())
+    this.cartCount=this.cSevice.getAllCartProducts().length
+  }
+
 }
