@@ -20,6 +20,10 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms'
 import { provideHttpClient } from '@angular/common/http';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 // import { LazytrailComponent } from './components/lazytrail/lazytrail.component';
 // import { NavdashboardComponent } from './dashboard/navdashboard/navdashboard.component';
 
@@ -41,6 +45,7 @@ import { ChildComponent } from './components/child/child.component';
     MongodbComponent,
     ParentComponent,
     ChildComponent,
+    AdminComponent,
     // LazytrailComponent,
     // NavdashboardComponent,
   ],
@@ -49,10 +54,13 @@ import { ChildComponent } from './components/child/child.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [
     provideClientHydration(),
-    provideHttpClient()
+    provideHttpClient(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

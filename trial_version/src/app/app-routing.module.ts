@@ -12,6 +12,7 @@ import { AngularComponent } from './course/angular/angular.component';
 import { NodejsComponent } from './course/nodejs/nodejs.component';
 import { MongodbComponent } from './course/mongodb/mongodb.component';
 import { ParentComponent } from './components/parent/parent.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
   {
@@ -76,6 +77,10 @@ const routes: Routes = [
   {
     path:'parent',
     component:ParentComponent
+  },
+  {
+    path:'admin',
+    component:AdminComponent
   },
   {
     path:'**',
