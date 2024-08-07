@@ -18,9 +18,7 @@ import { NodejsComponent } from './course/nodejs/nodejs.component';
 import { MongodbComponent } from './course/mongodb/mongodb.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms'
 import { provideHttpClient } from '@angular/common/http';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HomedashboardComponent } from './dashboard/homedashboard/homedashboard.component';
-import { UsersComponent } from './dashboard/users/users.component';
+// import { NavdashboardComponent } from './dashboard/navdashboard/navdashboard.component';
 
 @NgModule({
   declarations: [
@@ -38,9 +36,7 @@ import { UsersComponent } from './dashboard/users/users.component';
     AngularComponent,
     NodejsComponent,
     MongodbComponent,
-    DashboardComponent,
-    HomedashboardComponent,
-    UsersComponent,
+    // NavdashboardComponent,
   ],
   imports: [
     BrowserModule,

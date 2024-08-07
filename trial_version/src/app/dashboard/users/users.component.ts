@@ -17,7 +17,7 @@ export class UsersComponent implements OnInit {
   }
   getUsers(){
     this.api.getusers().subscribe((d:any)=>{
-      console.log(d.data)
+      // console.log(d.data)
       d.data.sort((a:any,b:any)=>{
         return b.user_id-a.user_id
       })
