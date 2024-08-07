@@ -65,6 +65,14 @@ const routes: Routes = [
     loadChildren:()=>import('./dashboard/dashboard.module').then(m=>m.DashboardModule)
   },
   {
+    path:'offers',
+    loadChildren:()=>import('./components/offers/offers.module').then(m=>m.OffersModule)
+  },
+  {
+    path:'lazy',
+    loadChildren:()=>import('./components/lazytrail/lazytrail.module').then(m=>m.LazytrailModule)
+  },
+  {
     path:'**',
     component:PageNotFoundComponent
   }
