@@ -18,6 +18,8 @@ import { NodejsComponent } from './course/nodejs/nodejs.component';
 import { MongodbComponent } from './course/mongodb/mongodb.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms'
 import { provideHttpClient } from '@angular/common/http';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
 // import { LazytrailComponent } from './components/lazytrail/lazytrail.component';
 // import { NavdashboardComponent } from './dashboard/navdashboard/navdashboard.component';
 
@@ -37,6 +39,8 @@ import { provideHttpClient } from '@angular/common/http';
     AngularComponent,
     NodejsComponent,
     MongodbComponent,
+    ParentComponent,
+    ChildComponent,
     // LazytrailComponent,
     // NavdashboardComponent,
   ],

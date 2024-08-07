@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div class="container">
+    <h2>Parent component</h2>
+    <h3>parent works! {{parent_name}}</h3>
+    <h4>message from child {{msg}}</h4>
+    <app-child [child_ka_parent]="parent_name" (myevent)="res($event)"></app-child>
+</div>
+<app-footer></app-footer>

@@ -11,6 +11,7 @@ import { TableComponent } from './components/table/table.component';
 import { AngularComponent } from './course/angular/angular.component';
 import { NodejsComponent } from './course/nodejs/nodejs.component';
 import { MongodbComponent } from './course/mongodb/mongodb.component';
+import { ParentComponent } from './components/parent/parent.component';
 
 const routes: Routes = [
   {
@@ -71,6 +72,10 @@ const routes: Routes = [
   {
     path:'lazy',
     loadChildren:()=>import('./components/lazytrail/lazytrail.module').then(m=>m.LazytrailModule)
+  },
+  {
+    path:'parent',
+    component:ParentComponent
   },
   {
     path:'**',

@@ -52,13 +52,8 @@ export class HeaderComponent {
     sub:[]
     },
     {
-    name:'Table',
-    url:'/table',
-    sub:[]
-    },
-    {
-    name:'Blob',
-    url:'/blob',
+    name:'Parent',
+    url:'/parent',
     sub:[]
     },
      
