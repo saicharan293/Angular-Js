@@ -6,10 +6,19 @@ import { Component } from '@angular/core';
   styleUrl: './parent.component.css'
 })
 export class ParentComponent {
-  parent_name:string='AVS'
-  msg:any;
+  // parent_name:string='AVS'
+  // msg:any;
 
-  res(val:any){
-    this.msg=val
+  // res(val:any){
+  //   this.msg=val
+  // }
+  act:boolean=true;
+  name:any='parent component'
+
+  xyz(data:any){
+    this.name=data
+  }
+  hideChild(){
+    this.act=false
   }
 }

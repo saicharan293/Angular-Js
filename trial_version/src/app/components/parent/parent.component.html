@@ -1,8 +1,15 @@
 <app-header></app-header>
-<div class="container">
+<!-- <div class="container">
     <h2>Parent component</h2>
     <h3>parent works! {{parent_name}}</h3>
     <h4>message from child {{msg}}</h4>
     <app-child [child_ka_parent]="parent_name" (myevent)="res($event)"></app-child>
+</div> -->
+<div class="container m-2">
+    <form action="">
+        <input type="text" name="" class="form-control" id="" #names (change)="xyz(names.value)">
+    </form>
+    <app-child [abc]="name" *ngIf="act"></app-child>
+    <button class="btn btn-danger" (click)="hideChild()">Hide child data</button>
 </div>
 <app-footer></app-footer>
