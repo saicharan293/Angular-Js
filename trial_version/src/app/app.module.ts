@@ -22,8 +22,8 @@ import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
+import { MatModule } from './modules/mat/mat.module';
+
 // import { LazytrailComponent } from './components/lazytrail/lazytrail.component';
 // import { NavdashboardComponent } from './dashboard/navdashboard/navdashboard.component';
 
@@ -54,8 +54,7 @@ import {MatIconModule} from '@angular/material/icon';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatButtonModule,
-    MatIconModule
+    MatModule
   ],
   providers: [
     provideClientHydration(),
