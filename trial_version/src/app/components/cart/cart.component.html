@@ -1,11 +1,12 @@
-<app-header></app-header>
+<app-header [CartItemsCount]="productsCount"></app-header>
 <div class="text-center text-danger my-2" *ngIf="productsCount===0; else elseBlock">
     <h1>Cart Empty</h1>
     <button class="btn btn-primary" routerLink="/products">Go to Products page</button>
 </div>
 <ng-template #elseBlock>
 
-<div class="text-center container my-2" *ngIf="productsCount>0">
+<div class="text-center container my-2" *ngIf="productsCount > 0">
+    <h1>Cart Products</h1>
     <table  class="table table-bordered table-hover table-dark table-striped">
         <thead>
             <tr>
@@ -14,17 +15,21 @@
                 <th>Image</th>
                 <th>Content</th>
                 <th>Price</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Angular</td>
-                <td><img src="/first.jpeg" alt=""></td>
-                <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum est quaerat repellat!</td>
-                <td>15000</td>
-            </tr>
-        </tbody>
+            <ng-container *ngFor="let p of productsInCart; let i = index;">
+                <tr >
+                    <td>{{i+1}}</td>
+                    <td>{{p.name}}</td>
+                    <td><img src="{{p.img}}" alt="trialimg"></td>
+                    <td>{{p.content}}</td>
+                    <td>{{p.fee}}</td>
+                    <td><button class="btn btn-danger" (click)="removeFromCart(p.id)">Remove</button></td>
+                </tr>
+            </ng-container>
+            </tbody>
     </table>
 </div>
     

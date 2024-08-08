@@ -1,5 +1,4 @@
 
-<p>products works!</p>
 <div class="container ">
     <h1 class="text-danger text-center">Products Page</h1>
     <div class="buttondiv text-center  d-flex justify-content-center align-items-center gap-2">
@@ -10,7 +9,7 @@
     <section class="container" id="courses">
         <h1 class="text-center my-4 text-Danger">Course List</h1>
     <div class="row" >
-      <ng-container *ngFor="let course of courseList">
+      <ng-container *ngFor="let course of courseList.courses">
       <div class="col-md-4 col-sm-12 col-12 mb-2">
         <!-- {{course | json}} -->
         <div class="card" >
@@ -20,7 +19,7 @@
             <p class="card-text text-info">{{course.content | titlecase}}</p>
             <button class="btn btn-primary"><i class="fa-solid fa-clock"> {{course.duration}}Hrs</i></button>
             <button class="btn btn-danger mx-2" (click)="addToCart(course)"><i class="fa-solid fa-indian-rupee-sign">{{course.fee }}/-</i></button>
-            <button class="btn btn-info text-sm">Read More</button>
+            <button class="btn btn-info text-sm">Delete</button>
           </div>
         </div>
       </div>

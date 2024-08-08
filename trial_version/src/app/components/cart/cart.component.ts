@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CartService } from '../../service/cart.service';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -7,14 +8,29 @@ import { CartService } from '../../service/cart.service';
   styleUrl: './cart.component.css'
 })
 export class CartComponent {
+  productsCount :any =0;
+  
+  productsInCart:any = [];
   constructor(public cService:CartService){}
 
-  productsInCart:any=[]
 
-  productsCount:any=this.cService.getAllCartProducts().length;
-  getProductsToCart(){
-    this.productsInCart=this.cService.getAllCartProducts()
-    this.productsCount=this.productsInCart.length
-    console.log('products count',this.productsCount)
+  ngOnInit()
+  { 
+   this.getAllCartProducts();
   }
+
+  getAllCartProducts(){
+    this.productsInCart=this.cService.getAllCartProducts()
+    this.productsCount = this.productsInCart.length;
+  }
+
+  removeFromCart(id:any){
+    // debugger
+    if(confirm("Are you sure to Delete ? ")){
+      this.cService.removeFromCart(id);
+      this.productsCount = this.productsInCart.length;
+    }
+  }
+  
+  
 }

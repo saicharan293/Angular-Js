@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { url } from 'inspector';
 import { CartService } from '../service/cart.service';
 
@@ -7,7 +7,11 @@ import { CartService } from '../service/cart.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent implements OnInit {
+
+export class HeaderComponent implements OnInit,OnChanges{
+  //for observing items count in cart, header need to send the change to cart
+  //to use ngOnChanges, Input directive need to be used
+  @Input() CartItemsCount= 0 
   public navs=[
     {
     name:'Home',
@@ -62,19 +66,20 @@ export class HeaderComponent implements OnInit {
       url:'/products',
       sub:[]
     },
-    // {
-    // name:'Lazy',
-    // url:'/lazy',
-    // sub:[]
-    // },
      
   ]
 
   constructor(public cSevice:CartService){}
-  cartCount:number=0
+  cartCount:number=this.cSevice.cartProductsCount
   ngOnInit(): void {
-    // console.log(this.cSevice.getCartProducts())
-    this.cartCount=this.cSevice.getAllCartProducts().length
+    this.cartCount=this.cSevice.getAllCartProducts().length;
   }
+
+  ngOnChanges(changes: SimpleChanges){
+    if(changes['CartItemsCount']){
+      this.cartCount=this.cSevice.getAllCartProducts().length;
+    }
+  }
+ 
 
 }
