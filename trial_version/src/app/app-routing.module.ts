@@ -15,6 +15,7 @@ import { ParentComponent } from './components/parent/parent.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ProductComponent } from './components/products/product/product.component';
 
 const routes: Routes = [
   {
@@ -91,6 +92,10 @@ const routes: Routes = [
   {
     path:'cart',
     component:CartComponent
+  },
+  {
+    path:'products/product/:id',
+    component:ProductComponent
   },
   {
     path:'**',
