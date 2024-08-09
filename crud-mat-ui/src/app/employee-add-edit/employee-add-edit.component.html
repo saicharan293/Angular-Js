@@ -60,7 +60,7 @@
     </div>
 </div>
 <div mat-dialog-actions class="action">
-    <button mat-fab extended>Cancel</button>
-    <button mat-fab extended color="primary" type="submit">Save</button>
+    <button mat-fab extended type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-fab extended color="primary" type="submit">{{data?'Update':'Save'}}</button>
 </div>
 </form>

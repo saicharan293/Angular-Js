@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { EmployeeService } from '../services/employee.service';
-import { DialogRef } from '@angular/cdk/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { CoreService } from '../core/core.service';
 
 @Component({
   selector: 'app-employee-add-edit',
   templateUrl: './employee-add-edit.component.html',
   styleUrl: './employee-add-edit.component.scss'
 })
-export class EmployeeAddEditComponent {
+export class EmployeeAddEditComponent implements OnInit{
   empForm: FormGroup;
   education:string[]=[
     'Matric',
@@ -19,7 +20,9 @@ export class EmployeeAddEditComponent {
   ]
   constructor(private formBuilder:FormBuilder,
     private _empservice:EmployeeService,
-    private dialog:DialogRef<EmployeeAddEditComponent>
+    private dialog:MatDialogRef<EmployeeAddEditComponent>,
+    @Inject (MAT_DIALOG_DATA) public data:any,
+    private coreService:CoreService
   ){
     this.empForm=this.formBuilder.group({
       firstName:'',
@@ -33,17 +36,32 @@ export class EmployeeAddEditComponent {
       package:''
     })
   }
+  ngOnInit(): void {
+    this.empForm.patchValue(this.data)
+  }
   onFormSubmit(){
     if(this.empForm.valid){
-      this._empservice.addEmployee(this.empForm.value).subscribe({
-        next: (val: any)=>{
-          alert('Employee added successfully')
-          this.dialog.close();
-        },
-        error:(err)=>{
-          console.log(err)
-        }
-      })
+      if(this.data){
+        this._empservice.updateEmployee(this.data.id,this.empForm.value).subscribe({
+          next: (val: any)=>{
+            this.coreService.openSnackBar('Form updated!!')
+            this.dialog.close(true);
+          },
+          error:(err)=>{
+            console.log(err)
+          }
+        })
+      }else{
+        this._empservice.addEmployee(this.empForm.value).subscribe({
+          next: (val: any)=>{
+            this.coreService.openSnackBar('Employee added successfully')
+            this.dialog.close(true);
+          },
+          error:(err)=>{
+            console.log(err)
+          }
+        })
+      }
     }
   }
 }
