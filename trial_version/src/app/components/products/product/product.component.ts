@@ -30,7 +30,7 @@ export class ProductComponent implements OnInit{
     this.findProduct=this.list.find((item)=>{
       return item.id==this.productId
     })
-    console.log(this.findProduct)
+    // console.log(this.findProduct)
   }
   
 

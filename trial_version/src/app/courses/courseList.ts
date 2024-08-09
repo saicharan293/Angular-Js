@@ -6,6 +6,7 @@ interface Courses{
     duration:number,
     fee:number,
     type:string
+    warantee:number
   }
 
 export class CourseLists{
@@ -17,7 +18,8 @@ export class CourseLists{
           content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?',
           duration:60,
           fee:15000,
-          type:'frontend'
+          type:'frontend',
+          warantee:3
         },
         {
           id:2,
@@ -26,7 +28,8 @@ export class CourseLists{
           content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?',
           duration:45,
           fee:15000,
-          type:'backend'
+          type:'backend',
+          warantee:2
         },
         {
           id:3,
@@ -35,7 +38,8 @@ export class CourseLists{
           content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?',
           duration:30,
           fee:15000,
-          type:'database'
+          type:'database',
+          warantee:2
         },
         {
           id:4,
@@ -44,7 +48,8 @@ export class CourseLists{
           content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?',
           duration:30,
           fee:15000,
-          type:'database'
+          type:'database',
+          warantee:1
         },
         {
           id:5,
@@ -53,7 +58,8 @@ export class CourseLists{
           content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?',
           duration:30,
           fee:15000,
-          type:'frontend'
+          type:'frontend',
+          warantee:2
         },
         {
           id:6,
@@ -62,7 +68,8 @@ export class CourseLists{
           content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dignissimos?',
           duration:30,
           fee:15000,
-          type:'backend'
+          type:'backend',
+          warantee:3
         },
       ]
 }

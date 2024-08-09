@@ -22,9 +22,9 @@ export class AdminComponent implements OnInit{
       }
     })
     pro.then((res)=>{
-      console.log(res)
+      // console.log(res)
     }).catch((res)=>{
-      console.log(res)
+      // console.log(res)
     })
 
     //So , we choose observables to achieve multiple  results
