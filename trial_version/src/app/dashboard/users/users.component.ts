@@ -24,4 +24,22 @@ export class UsersComponent implements OnInit {
       this.studentData=d.data
     })
   }
+  deletedMessage:any;
+
+  deleteUser(userid:any){
+    if(confirm('Are you sure to delte? ')){
+
+      // console.log(userid)
+      const data=new FormData()
+      data.append('u_id',userid)
+      this.api.deluser(data).subscribe((data:any)=>{
+        // console.log(data)
+        this.deletedMessage=data.message;
+        // console.log('deleted msg',this.deletedMessage)
+        if(data.status==1){
+          this.getUsers()
+        }
+      })
+    }
+  }
 }

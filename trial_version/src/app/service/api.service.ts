@@ -21,6 +21,8 @@ export class ApiService {
   getusers(){
     return this.http.get(this.url+'getStuUsers')
   }
-
+  deluser(userId:any){
+    return this.http.post(this.url+'DeleteStuUsers',userId)
+  }
 
 }

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="filters">
+    <a (click)="filter = 'Heads'" class="button bold">Heads</a>
+    <a (click)="filter = 'Arms'" class="button">Arms</a>
+    <a (click)="filter = 'Torsos'" class="button">Torsos</a>
+    <a (click)="filter = 'Bases'" class="button">Bases</a>
+    <a (click)="filter = ''" class="button">All</a>
+  </div>
+  <div class="products">
+    <div class="product-item" *ngFor="let product of getFilteredProducts()">
+      <bot-product-details
+        [product]="product"
+        (buy)="addToCart(product)"
+      ></bot-product-details>
+    </div>
+  </div>
+</div>

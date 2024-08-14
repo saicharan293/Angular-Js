@@ -1,6 +1,7 @@
 <app-navdashboard></app-navdashboard>
-<div class="container">
+<div class="container-fluid">
     <div class="table-responsive">
+        <h3>{{deletedMessage}}</h3>
         <table class="mt-5 table table-bordered table-dark table-hover stripped">
             <thead>
                 <tr>
@@ -10,6 +11,7 @@
                     <th>email</th>
                     <th>phone</th>
                     <th>password</th>
+                    <th>actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +22,10 @@
                     <td>{{student.user_lname}}</td>
                     <td>{{student.user_phone}}</td>
                     <td>{{student.user_password}}</td>
+                    <td style="width: 30%; ">
+                        <button class="btn btn-danger mr-2" (click)="deleteUser(student.user_id)"><i class="fa-solid fa-trash"></i></button>
+                        <button class="btn btn-info" ><i class="fa-solid fa-pen"></i></button>
+                    </td>
                 </tr>
             </tbody>
         </table>

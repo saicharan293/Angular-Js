@@ -1,0 +1,22 @@
+<div class="product">
+  <div class="product-details">
+    <img
+      src="{{ '/assets/images/' + product.imageName }}"
+      [alt]="product.name"
+    />
+    <div class="product-info">
+      <div class="name red">{{ product.name }}</div>
+      <div class="description">{{ product.description }}</div>
+      <div class="category">Part Type: {{ product.category }}</div>
+    </div>
+  </div>
+  <div class="price">
+    <div [ngClass]="getDiscountedClasses(product)">
+      {{ product.price.toFixed(2) | currency }}
+    </div>
+    <div class="discount" *ngIf="product.discount > 0">
+      {{ (product.price * (1 - product.discount)).toFixed(2) | currency }}
+    </div>
+    <button class="cta" (click)="buyButton(product)">Buy</button>
+  </div>
+</div>

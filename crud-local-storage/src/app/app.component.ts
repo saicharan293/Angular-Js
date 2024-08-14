@@ -56,6 +56,25 @@ export class AppComponent implements OnInit{
   onEdit(item:Student){
     this.studentObject=item;
     this.openModal();
+    // this.saveStudent();
+  }
+  updateStudent(){
+    const currentRecord=this.studentList.find(m=>m.id==this.studentObject.id)
+    if(currentRecord!=undefined){
+      currentRecord.name=this.studentObject.name;
+      currentRecord.address=this.studentObject.address;
+      currentRecord.mobileNo=this.studentObject.mobileNo;
+    };
+    localStorage.setItem('angular17crud',JSON.stringify(this.studentList));
+    this.closeModal();
+  }
+  onDelete(item:Student){
+    const isDelete=confirm("Are you sure to delete");
+    if(isDelete){
+      const currentRecord=this.studentList.findIndex(m=>m.id===this.studentObject.id)
+      this.studentList.splice(currentRecord, 1)
+      localStorage.setItem('angular17crud',JSON.stringify(this.studentList));
+    }
   }
 }
 

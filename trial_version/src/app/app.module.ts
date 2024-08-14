@@ -24,6 +24,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatModule } from './modules/mat/mat.module';
 import { CartComponent } from './components/cart/cart.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 // import { ProductsComponent } from './components/products/products.component';
 
 // import { LazytrailComponent } from './components/lazytrail/lazytrail.component';
@@ -58,7 +60,15 @@ import { CartComponent } from './components/cart/cart.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatModule
+    MatModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot(
+      {
+        timeOut: 1500,
+        positionClass: 'toast-top-center',
+        preventDuplicates: true,
+      }
+    )
   ],
   providers: [
     provideClientHydration(),
